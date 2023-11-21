@@ -1,0 +1,40 @@
+{
+  "journal": {
+    "created": "{{ param }} Journal Created SuccessFully",
+    "maxFiveAlphaCharacters": "this is test",
+    "deleted": "{{ param }} Journal Created SuccessFully",
+    "title": "Journals",
+    "sub_title": "List of journals created in our platform",
+    "create_new": "CREATE NEW",
+    "S_no": "S.No",
+    "journal_name": "Journal Name",
+    "key": "Key",
+    "type": "Type",
+    "createdate": "Created Date",
+    "actions": "Action(s)",
+    "status": "Status",
+    "journalEmptyWarning":"There are no journals created yet.",
+    "fillMandatory":"Fill the mandatory fields mentioned below"
+  },
+  "journal_header":{
+    "submission":"Submissions",
+    "review":"Review",
+    "copy_editing":"Copyediting",
+    "production":"Production"
+
+  },
+  "journal_breadcrumb": {
+    "journals": "Journals",
+    "home": "Home",
+    "addNewJournal": "Add New Journal"
+  },
+  "journalCreateWorkflow": {
+    "step1": "Step 1",
+    "step2": "Step 2",
+    "step3": "Step 3",
+    "journalTitle": "Journal Title"
+  },
+  "journalPlaceholder": {
+    "journalTitle":"Enter Journal Title"
+  }
+}

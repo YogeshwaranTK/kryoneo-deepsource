@@ -1,0 +1,100 @@
+{
+  "CREATE_EDIT_SUBMIT_OWN_SUBMISSION": {
+    "en": {
+      "display_name": "Create new submission as Author",
+      "description": "This permission enable a user can create new submission and it can be stored as draft and submitted",
+      "workflow_module": "SUBMISSION"
+    }
+  },
+  "VIEW_ANY_SUBMISSION": {
+    "en": {
+      "display_name": "View all the submitted paper in  journal",
+      "description": "This permission enable a user can view all the submission in the journal",
+      "workflow_module": "SUBMISSION"
+    }
+  },
+  "REQUEST_FOR_REVISION_FOR_ANY_SUBMITTED_PAPER": {
+    "en": {
+      "display_name": "Request Revision for any submitted papers in the journal",
+      "description": "This permission enable a user can able to review and request to submit revised version of files",
+      "workflow_module": "SUBMISSION"
+    }
+  },
+  "ACCEPT_REVISION_REQUEST_FOR_OWN_SUBMITTED_PAPER": {
+    "en": {
+      "display_name": "Accept revision request for the submitted paper",
+      "description": "This permission enable a user can able to accept revision request received for the submitted paper",
+      "workflow_module": "SUBMISSION"
+    }
+  },
+  "REJECT_REVISION_REQUEST_FOR_OWN_SUBMITTED_PAPER": {
+    "en": {
+      "display_name": "Reject revision request for the submitted paper",
+      "description": "This permission enable a user can able to reject revision request received for the submitted paper",
+      "workflow_module": "SUBMISSION"
+    }
+  },
+  "ACCEPT_REVISION_FOR_ANY_SUBMITTED_PAPER": {
+    "en": {
+      "display_name": "Accept revision submitted for any submissions",
+      "description": "This permission enable a user can able to accept revision submitted for any submissions",
+      "workflow_module": "SUBMISSION"
+    }
+  },
+  "REJECT_REVISION_FOR_ANY_SUBMITTED_PAPER": {
+    "en": {
+      "display_name": "Reject revision submitted for any submissions",
+      "description": "This permission enable a user can able to reject revision submitted for any submissions",
+      "workflow_module": "SUBMISSION"
+    }
+  },
+  "ACCEPT_ANY_SUBMISSION": {
+    "en": {
+      "display_name": "Accept any submissions",
+      "description": "This permission enable a user can able to accept any submissions",
+      "workflow_module": "SUBMISSION"
+    }
+  },
+  "REJECT_ANY_SUBMISSION": {
+    "en": {
+      "display_name": "Reject any submissions",
+      "description": "This permission enable a user can able to reject any submissions",
+      "workflow_module": "SUBMISSION"
+    }
+  },
+  "VIEW_ALL_PEER_REVIEW": {
+    "en": {
+      "display_name": "View All Peer Reviews of Submitted Paper in Journal",
+      "description": "This permission enable a user view all Peer reviews of Submitted Paper in Journal.",
+      "workflow_module": "PEER_REVIEW"
+    }
+  },
+  "MOVE_TO_PEER_REVIEW": {
+    "en": {
+      "display_name": "Move the submission to Peer Review or Skip Peer Review",
+      "description": "This permission enable a user can move submitted paper to Move Peer Review or Skip review.",
+      "workflow_module": "PEER_REVIEW"
+    }
+  },
+  "ASSIGN_SUBMISSION_TO_REVIEWER": {
+    "en": {
+      "display_name": "Assign the Submitted for Peer Review.",
+      "description": "This permission enable a user to assign the submitted for peer review to reviewers.",
+      "workflow_module": "PEER_REVIEW"
+    }
+  },
+  "PEER_REVIEW_SUBMISSION": {
+    "en": {
+      "display_name": "Peer Reviewing the Submitted Paper.",
+      "description": "This permission enable a user to Peer review the submitted Paper.",
+      "workflow_module": "PEER_REVIEW"
+    }
+  },
+  "CANCEL_ANY_PEER_REVIEW": {
+    "en": {
+      "display_name": "Cancel Any Peer Review",
+      "description": "This permission enable a user to Cancel Any Peer Review Which is Not create by him/her.",
+      "workflow_module": "PEER_REVIEW"
+    }
+  }
+}

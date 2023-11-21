@@ -1,0 +1,16 @@
+{
+  "header": {
+    "profile": "الملف الشخصي والحساب",
+    "organization_setting":"إعدادات المنظمة",
+    "chat_support":"الدردشة والدعم",
+    "signout":"خروج",    
+    "manage_account":"إدارة حسابي",
+    "user_id":"معرف المستخدم",
+    "site_map":"خريطة الموقع",
+    "fqa":"FQA",
+    "contact_us":"اتصل بنا",
+    "journal_settings":"إعدادات المجلة",
+    "user_management":"إدارةالمستخدم",
+    "language":"لغة"
+  }
+}

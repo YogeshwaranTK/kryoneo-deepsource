@@ -1,0 +1,67 @@
+{
+  "register": {
+    "title": "Register",
+    "form": {
+      "organizationName": "Organization name",
+      "fullName": "Full Name",
+      "fullName_placeholder": "Enter your full name",
+      "fullName_required": "Organisation administrator name is required",
+
+      "emailId": "Email ID",
+      "emailId_placeholder": "Enter your email ID",
+      "emailId_required": "User login required",
+
+      "password": "Password",
+      "password_placeholder": "Enter your password",
+      "password_required": "Password is required",
+
+      "confirmPassword": "Confirm Password",
+      "confirmPassword_placeholder": "Enter your confirm password",
+      "confirmPassword_required": "Confirm Password is required",
+
+      "addressOne": "Address Line 1",
+      "addressOne_placeholder": "Enter Door No/Street No/Address",
+      "addressOne_required": "Address 1 is required",
+
+      "addressTwo": "Address Line 2",
+      "addressTwo_placeholder": "Enter your Address Details",
+      "addressTwo_required": "Address 2 is required",
+
+      "addressThree": "Address Line 3",
+      "addressThree_placeholder": "Enter your Address Details",
+
+      "country": "Country",
+      "country_placeholder": "Select country",
+
+      "state": "State",
+      "state_placeholder": "Enter your State/Province",
+      "state_required": "State is required",
+
+      "phoneNumber": "Phone Number",
+      "phoneNumber_placeholder": "Enter your Phone Number",
+      "phoneNumber_required": "Mobile number is Required",
+
+      "select": "Select",
+
+      "button": "Register"
+    },
+    "messages": {
+      "alreadyHaveAccount": "Already have an account?",
+      "loginNow": "Login Now",
+      "validate": {
+        "login": {
+          "required": "Your username is required.",
+          "minlength": "Your username is required to be at least 1 character.",
+          "maxlength": "Your username cannot be longer than 50 characters.",
+          "pattern": "Your username is invalid."
+        }
+      },
+      "success": "<strong>Registration saved!</strong> Please check your email for confirmation.",
+      "error": {
+        "fail": "<strong>Registration failed!</strong> Please try again later.",
+        "userexists": "<strong>Login name already registered!</strong> Please choose another one.",
+        "emailexists": "<strong>Email is already in use!</strong> Please choose another one."
+      }
+    }
+  }
+}

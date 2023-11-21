@@ -1,0 +1,77 @@
+//ribbon flow
+
+.box {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.box-item {
+  display: block;
+  position: relative;
+  float: left;
+  width: auto;
+  height: 38px;
+  line-height: 38px;
+  margin-right: 10px;
+  padding: 0 8px;
+  background-color: lightgrey;
+  border-radius: 3px;
+  cursor: pointer;
+
+ 
+}
+
+.box-item:before {
+  content: "";
+  position: absolute;
+  right: -9px;
+  height: 0;
+  width: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 10px solid lightgrey;
+  border-radius: 4px;
+}
+
+.box-item:after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  height: 0;
+  width: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 10px solid #fff;
+  border-radius: 4px;
+}
+
+
+.box-item{
+  padding-left: 15px;
+}
+.box-item:not(:last-child):before {
+  border-left: 10px solid lightgrey;
+}
+.production-item{
+  margin-right: 0px !important;
+}
+.production-item:before {
+  border-left: none; 
+ 
+  
+}
+
+
+.category {
+  background-color: lightgrey;
+  list-style: none;
+    padding: 6px 10px;
+    border: 0;
+}
+
+

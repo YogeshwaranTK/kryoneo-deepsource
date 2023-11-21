@@ -1,0 +1,37 @@
+.review_scroll ul{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    
+    .nav-link{
+        margin: 0 !important;
+    }
+}
+
+.review_scroll ul::-webkit-scrollbar {
+    display: block;
+    height: 5px;
+}
+
+.review_scroll ul::-webkit-scrollbar-thumb {
+    background-color: #919191;
+    border-right: none;
+    border-left: none;
+}
+
+.review_scroll ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+.review_scroll ul::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 10px; 
+}
+
+.review_scroll ul::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 10px;
+}
+.review_align_center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

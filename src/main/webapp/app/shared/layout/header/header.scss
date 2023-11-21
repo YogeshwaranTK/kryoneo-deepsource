@@ -1,0 +1,357 @@
+#app-header {
+  .dropdown-menu {
+    //top: 10px !important;
+  }
+  nav {
+    background-color: var(--primary-bg-color);
+    height: 53px;
+  }
+  .navbar-brand {
+    color: #ffffff;
+    font-size: 25px;
+    img{
+      //width: 100%;
+      height: 49px;
+      padding-top: 3px;
+    }
+  }
+  .form-control {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    background-color: var(--primary-bg-color);
+    border-radius: 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    padding: 5px 10px 1px 10px !important;
+    .form-control:focus {
+    }
+    box-shadow: none;
+  }
+  .search-input {
+    position: relative;
+    width: 30%;
+  }
+  .form-control::placeholder {
+    color: #ffffff !important;
+    font-size: 13px;
+  }
+  .icon {
+    position: absolute;
+    right: 23px;
+    top: 18px;
+    font-size: 13px;
+    color: #ffffff;
+    height: 14px;
+    width: 14px;
+  }
+  .header_notification {
+    position: relative;
+    z-index: 99;
+    .rounded-circle {
+      top: 18px;
+      height: 16px;
+      width: 16px;
+      left: 22px;
+      backgroundz: red;
+      font-size: 8px;
+      text-align: center;
+      color: #fff;
+      line-height: 16px;
+      background: #fda947;
+    }
+  }
+}
+
+.header-icon {
+  color: #ffffff;
+  width: 70%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.image-padding {
+  padding: 15px 8px;
+}
+
+.logout_li {
+  padding:11px 8px;
+}
+
+.profile-img-padding {
+  padding: 0 0 0 8px;
+}
+
+.profile-icon {
+  background-color: orangered;
+  width: 100%;
+  height: 100%;
+}
+
+#custom-dropdown-help {
+  .profile-dropdown {
+    width: 15rem;
+    margin-top:1px !important;
+  }
+  .dropdown-menu {
+    box-shadow: 0 4px 8px 0 rgba(88, 88, 88, 0.26), 0 6px 20px 0 rgba(88, 88, 88, 0.26);
+  }
+  .dropdown-item {
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 14px;
+    top: 6px;
+  }
+  .first-item:hover,
+  .first-item:focus {
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+  }
+  .last-item {
+    border-bottom: 0 !important;
+  }
+  .last-item:hover,
+  .last-item:focus {
+    border-bottom-left-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+  }
+}
+
+.custom-badge {
+  position: absolute;
+  top: 20px;
+  background-color: #fda947;
+  color: #ffffff;
+  padding: 1px 7px;
+}
+.journal-profile-header {
+  border: 1px solid #fff;
+  border-radius: 60%;
+  width: 30px;
+  height: 30px;
+  background: red;
+  text-align: center;
+  padding-top: 4px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.additional-tabs {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 4px 0 0 8px;
+}
+
+.production-tab {
+  margin-right: 12%;
+}
+
+.sub_hec01,
+.sub_hec02,
+.sub_hec03,
+.sub_hec04 {
+  position: relative;
+  padding-left: 26px;
+  padding-top: 14px;
+  padding-right: 20px;
+  img {
+    position: absolute;
+    width: 16px;
+    left: 10px;
+    top: 18px;
+  }
+}
+
+#profile {
+  ol li a {
+    padding: 10px 10px 10px 15px;
+    font-size: 13px;
+    color: #6a6a65;
+  }
+  ol li {
+    border-bottom: 1px solid #d9d9d9;
+    padding: 7px 0;
+    ol li:hover {
+      background-color: #0a53be;
+    }
+  }
+
+  ol li:hover a {
+    color: #0a53be;
+  }
+
+  p {
+    color: #6a6a65;
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+
+  .css-1u9des2-indicatorSeparator {
+    display: none;
+  }
+  button {
+    padding: 7px 82px;
+  }
+}
+
+.user-name {
+  color: #323232;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.user-email {
+  color: #9198b0 !important;
+  font-size: 10px;
+  text-decoration: underline;
+  padding-top: 2px;
+  padding-bottom: 4px;
+}
+
+.profile-header {
+  padding: 10px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.profile_acc {
+  h6 {
+    font-weight: 600;
+    color: #9198b0;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+}
+.global-icon {
+  margin-inline: 0px 8px;
+  color: #212529;
+}
+
+.cus-dropdown-menu {
+  display: none;
+  list-style-type: none;
+  box-shadow: 0 4px 8px 0 rgba(88, 88, 88, 0.26), 0 6px 20px 0 rgba(88, 88, 88, 0.26);
+  width: 137px;
+  padding: 5px !important;
+}
+.cus-dropdown-submenu:hover .cus-dropdown-menu,
+.cus-dropdown-menu:hover {
+  display: block;
+  animation-delay: 2s;
+  margin-top: -1px;
+  top: 0px;
+  right: 100%;
+  position: absolute;
+  background-color: #fff;
+}
+
+.cus-dropdown-submenu {
+  position: relative;
+  font-size: 13px;
+  font-weight: bold;
+  color: #6a6a65 !important;
+  padding: 0px 0px 0px 15px;
+}
+.cus-dropdown-submenu li {
+  list-style-type: none;
+  border: none !important;
+  padding: 0px !important;
+}
+.cus-dropdown-menu li {
+  padding: 8px 18px !important;
+  border-bottom: 1px solid #d9d9d9 !important;
+}
+.cus-dropdown-menu li:nth-last-child(1),
+.cus-list li:nth-last-child(1) {
+  border-bottom: none !important;
+}
+
+.cus-dropdown-menu li a {
+  color: #6a6a65 !important;
+}
+.cus-dropdown-menu li a:hover {
+  color: #0a53be !important;
+}
+.cus-dropdown-submenu li span {
+  float: right;
+}
+.cus-list h6 {
+  padding: 7px 0px;
+}
+
+.dark {
+  background-color: yellow;
+}
+
+
+.overlay {
+  display: flex;
+  position: fixed;
+  transition: top 0.3s ease-in-out;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+
+}
+
+.hidden-div {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.hidden {
+  max-height: 200px; /* Adjust this value as needed */
+}
+
+
+/* Add your CSS styles for the sub-menu here */
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: none; /* Initially hide the sub-menu */
+}
+
+/* Show the sub-menu when isSubMenuOpen is true */
+.profile_acc:hover .sub-menu {
+  display: block;
+}
+
+.list-unstyled{
+  li:last-child{
+    border-bottom: none !important;
+  }
+}
+
+.profile_acc_lang{
+  li{
+    padding: 0px !important;
+  }
+  a{
+    padding:5px 10px 5px 20px;
+    display: block;
+  }
+  span{
+    position: absolute;
+    right: 6px;
+    top: 11px;
+  }
+  .dropdown-menu.cus-dropdown-menu.p-0{
+    padding: 0px !important;
+  }
+}
+
+
+

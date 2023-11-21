@@ -1,0 +1,29 @@
+{
+  "publishing": {
+    "InvalidFormat1234-5678": "التنسيق غير صالح. استخدم تنسيق 1234-5678.",
+    "JournalTitleRequired": "عنوان المجلة مطلوب",
+    "JournalTitleMust2Characters": "يجب أن يكون عنوان المجلة حرفين على الأقل",
+    "JournalTitleMust200Characters": "يجب أن لا يزيد عنوان المجلة عن 200 حرف",
+    "publishing_title": "إعداد المجلة - تفاصيل النشر",
+    "sub_title":"املأ تفاصيل النشر أدناه",
+    "keyPlaceholder": "مفتاح الادخال",
+    "keyRequired": "المفتاح مطلوب",
+    "MaximumLength5characters": "يجب أن يكون الحد الأقصى للطول 5 أحرف",
+    "KeyOnlyAlphabets": "يجب أن يكون المفتاح الحروف الهجائية فقط",
+    "publisher_name":"اسم الناشر",
+    "publisher_name_placeholder":"أدخل اسم الناشر",
+    "publisher_name_required":"اسم الناشر مطلوب",
+    "online_issn":"الرقم الدولي المعياري الدولي (ISSN) على الإنترنت",
+    "online_issn_placeholder":"أدخل الرقم الدولي الموحد للدوريات (ISSN) عبر الإنترنت",
+    "online_issn_required":"مطلوب ISSN عبر الإنترنت",
+    "print_issn":"اطبع ISSN",
+    "print_issn_placeholder":"أدخل طباعة ISSN",
+    "print_issn_required":"مطلوب طباعة ISSN",
+    "journal_description":"وصف المجلة",
+    "journal_description_placeholder":"أدخل وصف المجلة",
+    "journal_description_required":"وصف المجلة مطلوب",
+    "Editor_in_Chief":"رئيس التحرير (المحررين).",
+    "Editor_in_ChiefPlaceholder":"أدخل رئيس التحرير (المحررين)..",
+    "Editor_in_ChiefRequired":"مطلوب رئيس التحرير (المحررين)."
+  }
+}

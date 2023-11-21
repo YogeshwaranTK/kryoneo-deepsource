@@ -1,0 +1,12 @@
+{
+    "group":{
+        "group_title":"Group",
+        "group_subtitle":"List of Group assigned for contribution",
+        "s_no":"S.No",
+        "group_name":"Group Name",
+        "members":"Members",
+        "updated_on":"Updated on",
+        "action":"Action",
+        "group_list":"Group List"
+    }
+}

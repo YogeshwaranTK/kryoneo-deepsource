@@ -1,0 +1,19 @@
+{
+    "guidelines":{
+        "guidelines_title":"Guidelines",
+        "guidelines_subtitle":"Guidelines to follow",
+        "submission_format":"Submission Formats",
+        "submission_language":"Submission Languages",
+        "guidelines":"Guidelines",
+        "guidelines_placeholder":"Enter your Guidelines...",
+        "Article_file_type":"File Types",
+        "Add_Category":"Add Categories",
+        "Select_File_Type":"Select or Create file type",
+        "Select_File_Format":"Select file format",
+        "Select_Category":"Select or Create category",
+        "Select_language":"Select Language",
+        "submission_format_required":"Select at least one format",
+        "Select_language_required":"Select at least one Language",
+        "Article_Guidelines_required":"Guidelines is required"
+    }
+}

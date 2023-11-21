@@ -1,0 +1,51 @@
+#exampleModal,
+#DeleteGroupModal,
+#createUserModel {
+  .modal-footer {
+    justify-content: start;
+    border-top: 0;
+    padding: 22px 0 10px 0;
+  }
+
+  label {
+    color: #4a4a4a;
+    font-weight: 500;
+  }
+
+  .modal-footer {
+    button {
+      background-color: #ffffff;
+      padding: 7px 7px;
+      font-size: 12px;
+      font-weight: bold;
+      color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      min-width: 80px;
+      border-radius: 7px;
+      margin: 0 10px 0 0;
+    }
+  }
+  //.btn-close {
+  //  background: transparent url(../../../../../content/images/header-image/cancel.svg) center/1em auto no-repeat;
+  //}
+
+  .delete-warning {
+    color: #4a4a4a;
+    font-size: 16px;
+  }
+}
+
+.suggest-email{
+  font-size: 11px;
+  color: #6a6a65;
+}
+
+.nav-href{
+  font-weight: 500;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+    color: #0a58ca;
+  }
+}
+

@@ -1,0 +1,34 @@
+.btn--primary {
+  background-color: var(--btn-primary-color);
+  color: var(--default_color);
+  font-size: var(--default_font_size);
+  font-weight: var(--default_font_weight);
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--btn-primary-hover-color) !important;
+    color: var(--default_color);
+  }
+  &:disabled {
+    background-color: var(--btn-primary-disabled-color);
+    color: var(--default_color);
+  }
+}
+
+.btn--cancel {
+  background-color: var(--btn-cencel-color);
+  color: var(--btn-color);
+  font-size: var(--default_font_size);
+  font-weight: 600;
+  border-color: var(--btn-cencel-border-color);
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--btn-cencel-color) !important;
+    color: var(--btn-color);
+  }
+  &:disabled {
+    background-color: var(--btn-cencel-color);
+    color: var(--btn-color);
+  }
+}

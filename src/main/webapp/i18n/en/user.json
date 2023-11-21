@@ -1,0 +1,13 @@
+{
+    "user":{
+        "user_title":"Contribution-User List",
+        "user_subtitle":"List of Users assigned for contribution",
+        "s_no":"S.No",
+        "username":"User Name",
+        "email":"Email Address",
+        "created_on":"Created on",
+        "action":"Action",
+        "user_list":"User List",
+        "passwordResetSuccessfully":"Password Reset Successfully"
+    }
+}

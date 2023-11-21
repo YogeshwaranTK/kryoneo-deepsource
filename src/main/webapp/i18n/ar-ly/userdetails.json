@@ -1,0 +1,16 @@
+{
+  "userdetails_Beadcrumb": {
+    "Home": "بيت",
+    "User_Details": "بيانات المستخدم"
+  },
+  "userdetails":{
+    "User_Details_title": "بيانات المستخدم",
+    "User_Details_subtitle": "التفاصيل الكاملة للمستخدم",
+    "Full_Name": "الاسم الكامل",
+    "Email_Address": "عنوان البريد الإلكتروني",
+    "Created_Date_And_Time": "تاريخ الإنشاء ووقته",
+    "Created_By": "انشأ من قبل",
+    "Activated": "مفعل"
+
+  }
+}

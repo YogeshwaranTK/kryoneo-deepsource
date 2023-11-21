@@ -1,0 +1,12 @@
+{
+  "button-permission": {
+    "ACCEPT_&_SEND_PRODUCTION": "ACCEPT & SEND PRODUCTION",
+    "REQUEST_A_REVIEW": "REQUEST A REVIEW",
+    "ACCEPT_SUBMISSION": "ACCEPT SUBMISSION",
+    "DECLINE_REQUEST_REVIEW": "DECLINE REQUEST REVIEW",
+    "ACCEPT_REVIEW_REQUEST_&_NEXT": "ACCEPT REVIEW REQUEST & NEXT",
+    "Participants": "Participants",
+    "ASSIGN": "ASSIGN",
+    "No_Participants_Found": "No Participants Found"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "journal": {
+    "created": "{{ param }} Journal Created SuccessFully",
+    "maxFiveAlphaCharacters": "this is test",
+    "deleted": "{{ param }} Journal Created SuccessFully",
+    "title": "المجلات",
+    "sub_title": "قائمة المجلات التي تم إنشاؤها في منصتن",
+    "create_new": "خلق جديد إبداع جديد",
+    "S_no": "الرقم التسلسلي",
+    "journal_name": "اسم المجلة",
+    "key": "مفتاح",
+    "type": "يكتب",
+    "createdate": "تاريخ الإنشاء",
+    "actions": "فعل",
+    "status": "حالة",
+    "journalEmptyWarning": "لا توجد مجلات تم إنشاؤها بعد.",
+    "fillMandatory": "املأ الحقول الإلزامية المذكورة أدناه"
+  },
+  "journal_header":{
+    "submission":"التقديمات",
+    "review":"مراجعة",
+    "copy_editing":"التدقيق",
+    "production":"إنتاج",
+    "journals": "المجلات"
+
+  },
+  "journal_breadcrumb": {
+    "journals": "المجلات",
+    "home": "بيت",
+    "addNewJournal": "إضافة مجلة جديدة"
+  },
+  "journalCreateWorkflow": {
+    "step1": "خطوة 1",
+    "step2": "خطوة 2",
+    "step3": "خطوة 3",
+    "journalTitle": "عنوان الدورية"
+  },
+  "journalPlaceholder": {
+    "journalTitle":"أدخل عنوان المجلة"
+  }
+}

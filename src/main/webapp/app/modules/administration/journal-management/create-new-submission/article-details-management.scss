@@ -1,0 +1,344 @@
+
+.Submssion_details .col-3.b-left button {
+  width: 100%;
+  min-width: 100%;
+  border-radius: 5px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.article-head{
+  color: #9198B0;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.article-details{
+  color: #4A4A4A;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+.article-details-tages{
+  color: #4A4A4A;
+  font-weight: 600;
+  margin-right:8px;
+  font-size: 14px;
+  margin-bottom: 13px;
+  background: #f1f1f1;
+  padding: 2px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  border: 1px solid darkgray;
+}
+
+.b-bottom{
+   border-bottom: 1px solid #d9d9d9;
+}
+
+.b-left{
+  border-left: 1px solid #d9d9d9;
+}
+
+
+.article-btn{
+  color: var(--primary-color);
+  background-color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+  border: 1px solid #0a53be;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+}
+.atricle-files{
+ text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.w-12{
+  width: 16%;
+}
+
+.w-88{
+  width: 88%;
+}
+
+.comma {
+  margin-right: 20px;
+}
+
+.Submittd_list{
+  h3{
+    color:#323232;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 16px;
+    font-weight: 700;
+  }
+  .col-3.b-left{
+    padding-left: 36px;
+    padding-top: 12px;
+    button{
+      width: 100%;
+      min-width: 100%;
+      border-radius: 5px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+  }
+  table{
+    td,th{
+      font-size: 14px;
+      padding-bottom:15px;
+      svg{
+        font-size: 11px;
+      }
+    }
+    td{
+      svg{
+        //padding-left:10px;
+        color:var(--primary-color);
+        font-weight: 700;
+      }
+    //&:first-child{
+    //  color:#0E3AAB;
+    //  font-weight: 600;
+    //}
+    }
+
+    th{
+      svg{
+        color:#9198B0;
+      }
+    }
+  }
+  .titles{
+    color:var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    &:hover{
+      color: #2E4053;
+    }
+  }
+  .tab-padding{
+    padding-left:35px;
+    p{
+      line-height: 29px;
+      margin-bottom: 5px;
+    }
+  }
+  .highlights{
+    color: #9198B0;
+    font-weight: 500;
+  }
+  .sub-title{
+    color: #9198B0;
+    font-weight: 600;
+    padding-bottom: 5px;
+  }
+  .role-title{
+    color: #4A4A4A;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  //ul li{
+  //    padding-bottom: 5px;
+  //}
+
+}
+.Submssion_details{
+  .col-3.b-left{
+    padding-left: 36px;
+    padding-top: 12px;
+    button{
+      //width: 100%;
+      //border-radius: 5px;
+      //font-size: 13px;
+      //margin-bottom: 10px;
+    }
+  }
+}
+
+.request-submission{
+  max-width: 700px !important;
+  margin-right: auto;
+  margin-left: auto;
+  .request-head{
+    color:#9198B0;
+    font-size: 13px;
+    padding: 3px;
+  }
+  .request-sub-head{
+    font-size: 14px;
+    font-weight: 600;
+    color: #323232;
+  }
+  .custom-checkbox{
+    padding: 10px 0 0 0;
+    input{
+      margin:0 10px 0 0;
+    }
+   label{
+     color: #4A4A4A;
+     font-size: 13px;
+   }
+  }
+  .form-radio-input{
+    width: 18px;
+    height: 18px;
+    margin-top: 3px !important;
+  }
+  .custom-radio{
+    input{
+      margin:3px 10px 0 0;
+    }
+  }
+
+  .form-control {
+    border: 1px solid #efebeb;
+    border-radius: 4px;
+  }
+  .form-control:focus {
+    background-color: #ffffff;
+    box-shadow: none !important;
+    border-color: var(--primary-color);
+  }
+
+  input[type='file'] {
+    background-color: #ffffff !important;
+    color: #9198b0;
+  }
+
+  input[type='file']::file-selector-button {
+    border: 1px solid #efebeb;
+    padding: 3px 20px;
+    margin: 0 10px 0 0;
+    border-radius: 5px;
+    background-color: #efefef !important;
+    color: #6a6a65;
+  }
+}
+
+.child-filename {
+  font-size: 13px;
+  font-weight: 500 !important;
+  color: #4A4A4A !important;
+  padding-left: 10px;
+  &:hover{
+    color: #0a58ca !important;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.file,.item{
+  list-style: none;
+}
+
+/* SCSS for the Checkbox Tree View */
+.checkbox-tree {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+
+  /* Style for items */
+  > .item {
+    margin-left: 20px; /* Indentation for nested items */
+    position: relative;
+
+    /* Style for checkboxes */
+    input[type="checkbox"] {
+      margin-right: 5px;
+      position: relative; /* Add relative positioning to the checkbox */
+    }
+
+    /* Custom style for checked checkboxes */
+    input[type="checkbox"]:checked + span {
+      font-weight: bold;
+      color: #2196F3; /* Blue color for checked items */
+    }
+
+    /* |- Type Design - Vertical Line */
+    &::before {
+      content: '';
+      position: absolute;
+      left: 10px; /* Adjust this value to control the vertical line offset for items */
+      top: 3px;
+      height: 110%;
+      border-left:2px dotted #9198B0;
+    }
+    &:last-child::before {
+      height: 93%;
+    }
+  }
+}
+.form-check-input{
+  margin-top: 0 !important;
+  border-color: #9198B0;
+  background-color: #fff;
+  &:focus{
+    box-shadow: none;
+  }
+}
+/* Style for files */
+.checkbox-tree  {
+  padding-left: 0;
+  .file {
+    margin-left: 12px; /* Indentation for files */
+    margin-top: 14px;
+    margin-bottom: 16px;
+    color: #666;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -1px; /* Adjust this value to control the vertical line offset for items */
+      top: 14px;
+      width: 38px;
+      border-bottom:2px dotted #9198B0;
+    }
+  }
+}
+
+
+.modal-fullscreen-lg-down{
+  max-width: 800px;
+}
+
+.tab-padding{
+  p{
+    b{
+    text-transform: capitalize;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

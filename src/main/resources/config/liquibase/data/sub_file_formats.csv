@@ -1,0 +1,9 @@
+﻿"id";"name";"file_extension";"is_deleted";"deleted_remarks";"created_by";"created_at";"last_modified_by";"last_modified_at"
+1;Text Document;txt;0;;null;CURRENT_TIMESTAMP;null;
+2;PDF;pdf;0;;null;CURRENT_TIMESTAMP;null;
+3;Microsoft Word;docx;0;;null;CURRENT_TIMESTAMP;null;
+4;Word;doc;0;;null;CURRENT_TIMESTAMP;null;
+5;HTML;html;0;;null;CURRENT_TIMESTAMP;null;
+6;JPG;jpg;0;;null;CURRENT_TIMESTAMP;null;
+7;JPEG;jpeg;0;;null;CURRENT_TIMESTAMP;null;
+8;PNG;png;0;;null;CURRENT_TIMESTAMP;null;

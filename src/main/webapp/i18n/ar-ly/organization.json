@@ -1,0 +1,19 @@
+{
+  "organization": {
+    "emailOtpResend": "تم إرسال OTP بنجاح {{param}}",
+    "register": "<strong> تم حفظ التسجيل! </ strong> يرجى مراجعة {{param }}@gmail.com للتأكيد.",
+    "emailVerify": "تم تسجيل {{param}} بنجاح",
+    "registered": "تم تسجيل المؤسسة بنجاح",
+    "countryNotFound": "البلد غير موجود",
+    "contactSupport": "خطأ غير معروف",
+    "emailAlreadyExists": "البريد الإلكتروني مسجل مسبقا",
+    "emailVerified": "تم التحقق من البريد الإلكتروني بنجاح",
+    "emailNotFound": "البريد الإلكتروني غير موجود",
+    "emailAlreadyVerified": "تم التحقق من البريد الإلكتروني بالفعل",
+    "emailOtpNotFound": "البريد الإلكتروني OTP غير موجود",
+    "emailExpiryTimeNotFound": "لم يتم العثور على وقت انتهاء صلاحية البريد الإلكتروني",
+    "otpExpired": "انتهت صلاحية OTP",
+    "wrongOTP": "OTP خاطئ",
+    "emailOtpResendSuccess": "Otp إعادة الإرسال إلى البريد الإلكتروني بنجاح"
+  }
+}

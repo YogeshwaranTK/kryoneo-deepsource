@@ -1,0 +1,81 @@
+{
+    "Submission_Create_Breadcrumb": {
+        "Journals": "Journals",
+        "Home": "Home",
+        "DFR":"DRF",
+        "Create_Submission": "Create New Submission"
+    },
+    "Submission_Create_Basic_Details":{
+        "Article_Title":"Article Title",
+        "Article_Title_notes":"(First letter of each word should be in Upper case)",
+        "Enter_Article_Title":"Enter Article Title",
+        "Article_Title_Required":"Article Title is a required field",
+        "Sub_Title":"Sub Title",
+        "Enter_Sub_Title":"Enter Article Sub-title",
+        "Article_keyword":"Add Keywords/ tags",
+        "Article_notes":"If any related",
+        "Enter_Article_keyword":"Type Keyword and Enter",
+        "Submission_Language":"Submission Language",
+        "Submission_Language_notes":"Choose the Primary Language",
+        "Select_language":"Select Language",
+        "Abstract":"Abstract",
+        "Abstract_Notes":"Short description about the article",
+        "Enter_Abstract":"Short Description / Abstract about the article",
+        "Abstract_Required":"Abstract is a required field",
+        "Article_Agree":"I agree to the",
+        "Article_Terms":"Terms of use",
+        "And":" and ",
+        "Article_Policy":"Privacy Policy",
+        "Agree_Terms":"You must agree to the terms"
+    },
+    "Contribution_add":{
+        "Title":"Add Contributor",
+        "Prefix":"Prefix",
+        "Enter_Title":"Enter prefix",
+        "First_Name":"First Name",
+        "Enter_First_Name":"Enter the first name",
+        "First_Name_Required":"First Name is required",
+        "Surname":"Surname",
+        "Enter_Surname":"Enter the surname",
+        "Surname_Required":"Surname is required",
+        "Middle_Name":"Middle Name",
+        "Enter_Middle_Name":"Enter the middle name",
+        "Email":"Email ID",
+        "Enter_Email":"Enter the email id",
+        "ORCID":"ORCID",
+        "Enter_ORCID":"Enter the orcid",
+        "Contributor_Role":"Contributor Role",
+        "Contributor_Role_Required":"Select a contributor role",
+        "Translator":"Translator",
+        "Author":"Author",
+        "Browse_List":"Include this contributor in browse lists?",
+        "Affiliations":"Affiliations",
+        "Enter_Affiliations":"Enter the affiliations",
+        "Add_Affiliation":"Add Affiliation",
+        "Primary_Contact":"Primary Contact"
+    },
+    "Upload_files":{
+        "Select_File_Type":"Select File Type",
+        "Upload_Files":"Upload Files",
+        "Article_Text_Required":"Article text is required"
+    },
+    "Contribution":{
+        "Title":"ARTICLE CONTRIBUTORS",
+        "Add_Contribution":"Add Contribution",
+        "Sample_Excel":"Sample Excel",
+        "Upload_Excel":"Upload Excel File",
+        "First_Name":"First Name",
+        "Surname":"Surname",
+        "Email":"Email ID",
+        "Contributor_Role":"Contributor Role",
+        "Primary_Contact":"Primary Contact",
+        "Status":"Status",
+        "Action":"Action(s)"
+    },
+    "Workflow_Title":{
+        "Basic_details":"Basic Details",
+        "Contribution":"Contribution",
+        "Upload_File":"Upload File"
+    }
+
+}

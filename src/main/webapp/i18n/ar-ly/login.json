@@ -1,0 +1,25 @@
+{
+  "login": {
+    "title": "تسجيل الدخول",
+    "form": {
+      "password": "كلمه السر",
+      "password.placeholder": "كلمة السر خاصتك",
+      "rememberMe": "تذكرنى",
+      "button": "تسجيل الدخول",
+      "username_validation": "اسم المستخدم لا يمكن أن يكون فارغا!",
+      "password_validation": "لا يمكن أن تكون كلمة المرور فارغة!"
+    },
+    "messages": {
+      "error": {
+        "authentication": "<strong>فشل تسجيل الدخول!</strong> يرجى التحقق من بيانات الاعتماد الخاصة بك وحاول مرة أخرى."
+      }
+    },
+    "password": {
+      "forgot": "هل نسيت كلمة المرور الخاصة بك؟"
+    },
+    "register": {
+      "account": "ليس لديك حساب؟",
+      "create": "سجل الان"
+    }
+  }
+}

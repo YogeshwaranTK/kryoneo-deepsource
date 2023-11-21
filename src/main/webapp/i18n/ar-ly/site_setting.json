@@ -1,0 +1,48 @@
+{
+  "Journal_Summary": {
+    "Journal_title": "ملخص المجلة",
+    "Journal_subtitle": "املأ تفاصيل الملخص أدناه",
+    "Journal_Cover_Image": "صورة غلاف المجلة",
+    "File_required": "الملف مطلوب",
+    "Journal_Summary": "ملخص المجلة",
+    "Enter_Journal_Summary": "أدخل ملخص المجلة",
+    "Journal_summary_is_required": "مطلوب ملخص المجلة"
+  },
+  "Journal_Details": {
+    "Journal_title": "تفاصيل المجلة",
+    "Journal_subtitle": "املأ تفاصيل النشر أدناه",
+    "Online_ISSN": "الرقم الدولي المعياري الدولي (ISSN) على الإنترنت",
+    "Enter_Online_ISSN": "أدخل الرقم الدولي المعياري الدولي (ISSN) على الإنترنت",
+    "Online_ISSN_is_required": "مطلوب ISSN على الانترنت",
+    "Print_ISSN": "طباعة الرقم الدولي الموحد للدوريات",
+    "Enter_Print_ISSN": "أدخل طباعة ISSN",
+    "Print_ISSN_is_required": "طباعة ISSN مطلوبة",
+    "Editor(s)-in-Chief": "رئيس التحرير (المحررين).",
+    "Enter_Editor(s)-in-Chief": "أدخل رئيس التحرير (المحررين).",
+    "Journal_Description": "وصف المجلة",
+    "Enter_Journal_Description": "أدخل وصف المجلة"
+  },
+  "Guidelines": {
+    "Journal_title": "القواعد الارشادية",
+    "Journal_subtitle": "المبادئ التوجيهية لمتابعة",
+    "Article_File_Type": "نوع ملف المقالة",
+    "Select_or_Create_file_type": "حدد أو أنشئ نوع الملف",
+    "Select_at_least_one_file_type": "حدد نوع ملف واحد على الأقل",
+    "Article_Submission_Format": "صيغة تقديم المقال",
+    "Select_file_format": "حدد تنسيق الملف",
+    "Select_at_least_one_format": "حدد تنسيقًا واحدًا على الأقل",
+    "Add_category": "إضافة فئة",
+    "Select_or_Create_category": "حدد أو أنشئ فئة",
+    "Article_Submission_Language": "لغة تقديم المقال",
+    "Select_Language": "اختار اللغة",
+    "Select_at_least_one_language": "حدد لغة واحدة على الأقل",
+    "Article_Guidelines": "إرشادات المادة",
+    "Enter_your_Article_Guidelines": "أدخل إرشادات المقالة الخاصة بك",
+    "Article_Guidelines_is_required": "مطلوب إرشادات المادة."
+  },
+  "site-setting-management": {
+    "Journal_Summary": "ملخص المجلة",
+    "Journal_Details": "تفاصيل المجلة",
+    "Guidelines": "القواعد الارشادية"
+  }
+}

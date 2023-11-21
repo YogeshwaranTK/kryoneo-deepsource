@@ -1,0 +1,131 @@
+{
+  "userManagement": {
+    "home": {
+      "title": "Users",
+      "refreshListLabel": "Refresh list",
+      "createLabel": "Create a new user",
+      "createOrEditLabel": "Create or edit a user"
+    },
+    "created": "A new user is created with identifier {{ param }}",
+    "updated": "A user is updated with identifier {{ param }}",
+    "deleted": "A user is deleted with identifier {{ param }}",
+    "delete": {
+      "question": "Are you sure you want to delete user {{ login }}?"
+    },
+    "detail": {
+      "title": "User"
+    },
+    "login": "Login",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email",
+    "activated": "Activated",
+    "deactivated": "Deactivated",
+    "profiles": "Profiles",
+    "langKey": "Language",
+    "createdBy": "Created by",
+    "createdDate": "Created date",
+    "lastModifiedBy": "Modified by",
+    "lastModifiedDate": "Modified date"
+  },
+  "user": {
+    "forgotPassEmailOtpSent": "Otp sent to email successfully",
+    "userNotFound": "User Not Found",
+    "forgotPassEmailOtpVerified": "Email otp verified",
+    "emailOtpNotFound": "Email OTP Not Found",
+    "emailExpiryTimeNotFound": "Email Expiry Time Not Found",
+    "otpExpired": "OTP Expired",
+    "wrongOTP": "Wrong OTP",
+    "passwordChanged": "Password Changed successfully",
+    "wrongVerifyKey": "Wrong Verify Key"
+  },
+  "userManagementSideBar": {
+    "UserManagement": "User Management",
+    "Users": "Users",
+    "Roles": "Roles",
+    "DeveloperSettings": "Developer Settings",
+    "GeneralSetting": "General Setting",
+    "EmailSetting": "Email Setting",
+    "StorageSetting": "Storage Setting",
+    "administrators": "Administrators"
+  },
+  "userManagementBreadcrumb": {
+    "Home": "Home",
+    "Manage": "Manage",
+    "EmailSettings": "Email Settings",
+    "GeneralSetting": "General Settings",
+    "StorageSetting": "Storage Settings"
+  },
+  "userManagementUsers": {
+    "ListOfUsersRegisteredPlatform": "List of Users registered in our platform",
+    "DeleteUser": "Delete User",
+    "ConfirmDeleteDes": "Are you sure you want to delete the user?",
+    "ReasonDeleteUser": "Reason for Delete User",
+    "EnterReasonPH": "Enter your reason",
+    "ReasonRequired": "Reason is Required"
+  },
+  "userManagementCreateUser": {
+    "CreateUser": "Create User",
+    "UpdateUser": "Update User",
+    "FillMandatoryDescription": "Fill the mandatory fields mentioned below",
+    "AccessOrgAdminRadio": "Do you want to give access to organization administration?",
+    "AccessJournalAdminRadio": "Do you want to give access to journals contributors group?",
+    "Journal": "Journal",
+    "JournalGroup": "Journal group",
+    "DoHaveORCID": "Do you have ORCID for the user?",
+    "CanAccessJournalAndGroups": "User can access Journals and  Journals groups."
+  },
+  "roleManagement": {
+    "roleCreatedAccessSiteProject": "List of Role created to access to the site and project",
+    "RoleName": "Role Name",
+    "deleteRole": "Delete Role",
+    "youWantToDelete": "Are you sure you want to delete the role?",
+    "ReasonDelete": "Reason for delete",
+    "ReasonDeletePlaceholder": "Enter Delete Reason",
+    "ReasonDeleteRequired": "Reason field is required",
+    "RoleRequired": "Role name is required",
+    "AddRole": "Add Role",
+    "AddUser": "Add User",
+    "EnterRoleName": "Enter Role Name",
+    "ListUsersAssignedRole": "List of Users assigned to this role."
+  },
+  "generalSettings": {
+    "GeneralSettings": "General Settings",
+    "SubGeneralSettings": "Sub-General Settings",
+    "DateFormat": "Date Format",
+    "DateFormatPlaceHolder": "Select date format",
+    "DateFormatRequired": "Date format is required"
+  },
+  "StorageSettings": {
+    "StorageAccountEndpointRequired": "Storage Account Endpoint is required",
+    "ConnectionStringRequired": "Connection String is required",
+    "SubStorageSettings": "Sub-Storage Settings",
+    "AzureFileDownloadBaseUrl": "Azure file download base url",
+    "EnterAzureFileDownloadBaseUrl": "Enter your azure file download base url",
+    "AzureStorageAccountConnectionString": "Azure storage account connection string",
+    "EnterYourAzureStorageAccountConnectionString": "Enter your azure storage account connection string"
+  },
+  "EmailSettings": {
+    "SubEmailSettings" : "Sub-Email Settings",
+    "EmailHost" : "Email Host",
+    "EnterEmailHost" : "Enter Email Host",
+    "EmailHostRequired":"Email host is Required",
+    "EmailPort" : "Email Port",
+    "EnterEmailPort": "Enter Email Port",
+    "EmailPortRequired": "Email port is Required",
+    "EmailSenderUsername": "Email Sender Username",
+    "EnterSenderEmailUsername": "Enter Sender Email Username",
+    "EmailSenderUsernamerequired": "Email sender username is required",
+    "EmailSenderPassword": "Email Sender Password",
+    "EnterEmailSenderPassword":"Enter Sender Email Password",
+    "EmailSenderPasswordRequired": "Email sender password is Required",
+    "EmailAuthEnable":"Email Auth Enabled",
+    "EnterEmailAuthEnable":"Enter Email Auth Enabled",
+    "EmailAuthEnableRequired": "Email Auth Enabled is required",
+    "EmailStarttls":"Email Starttls Enabled",
+    "EnterEmailStarttls":"Enter Email Starttls Enabled",
+    "EnterEmailStarttlsRequired": "Email Starttls Enabled is Required",
+    "EmailPortNumberMaxLength": "Maximum length should be 6 numbers",
+    "EmailPortNumberValidation": "Port numbers only"
+  }
+}

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="user_pdf" pageWidth="1000" pageHeight="595" orientation="Landscape" columnWidth="960"
+              leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true"
+              uuid="33f29564-363f-400d-aa90-d7682d171fa1">
+    <property name="net.sf.jasperreports.export.xls.remove.empty.space.between.rows" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.remove.empty.space.between.columns" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.white.page.background" value="false"/>
+    <property name="net.sf.jasperreports.export.xls.detect.cell.type" value="true"/>
+    <property name="net.sf.jasperreports.export.xls.ignore.graphics" value="false"/>
+    <property name="net.sf.jasperreports.export.xls.ignore.cell.border" value="true"/>
+
+    <field name="login" class="java.lang.String">
+    </field>
+    <field name="firstName" class="java.lang.String">
+    </field>
+    <field name="lastName" class="java.lang.String">
+    </field>
+    <field name="email" class="java.lang.String">
+    </field>
+    <field name="roleName" class="java.lang.String">
+    </field>
+    <field name="countryName" class="java.lang.String">
+    </field>
+    <field name="mobileNumber" class="java.lang.String">
+    </field>
+    <field name="createdByName" class="java.lang.String">
+    </field>
+    <field name="createdDate" class="java.time.Instant">
+    </field>
+    <field name="lastModifiedByName" class="java.lang.String">
+    </field>
+    <field name="lastModifiedDate" class="java.time.Instant">
+    </field>
+    <field name="activated" class="java.lang.Boolean"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <columnHeader>
+        <band height="30" splitType="Stretch">
+            <staticText>
+                <reportElement x="50" y="0" width="80" height="30" uuid="732d8f7e-e0ef-4093-ae38-ee51463fb118"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Login]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="130" y="0" width="80" height="30" uuid="6301c5ea-bce6-4ee0-bd0b-7f773541a135"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[First Name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="210" y="0" width="80" height="30" uuid="defe020c-391d-463b-b2e3-6affbf006fa0"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Last Name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="290" y="0" width="110" height="30" uuid="d6ed33bd-beb7-4a23-a897-3f3ab9bbb341"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Email]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="400" y="0" width="70" height="30" uuid="6713345b-eb03-4a71-82d5-f730132b3d45"/>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Mobile Number]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="470" y="0" width="80" height="30" uuid="560ca40a-5a18-461f-ac26-906daf8d4aee"/>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Role]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="550" y="0" width="80" height="30" uuid="8db9de30-01d3-4e5e-bc7e-38e2b5a61d0d"/>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Country]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="630" y="0" width="50" height="30" uuid="f3a582b1-611f-48d3-8904-49b5ca7279d8"/>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Activated]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="680" y="0" width="80" height="30" uuid="a3a2a75e-6489-46cb-b293-6e5f371c1347"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Created By]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="760" y="0" width="60" height="30" uuid="24cff612-845d-4815-9106-a99a3f24c0d8"/>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Created Date]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="820" y="0" width="80" height="30" uuid="82c61202-33b2-4666-9536-3a2945e473e4"/>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Last Modified By]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="900" y="0" width="70" height="30" uuid="6f34246f-f3b8-41b4-881e-b79536b056fe"/>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Last Modified Date]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="0" width="50" height="30" uuid="ba615e3a-7a8a-41fd-be26-da11ec3d91bf"/>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[S.NO]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="30" splitType="Stretch">
+            <textField isBlankWhenNull="true">
+                <reportElement x="50" y="0" width="80" height="30" uuid="2f2ec859-16da-4d67-8510-22cb61687c5b">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="d46b7dce-753d-4257-a008-46ea25c6f17e"/>
+                </reportElement>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{login}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="130" y="0" width="80" height="30" uuid="5cea47d1-d7cb-4a73-8d1f-5d851086a458">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="7ad33424-d2d2-4a00-8c5e-d85163d37f50"/>
+                </reportElement>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="210" y="0" width="80" height="30" uuid="c5097a32-ec40-409f-837a-ef7bd0694967">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="ce761dd6-266c-4a7c-b381-77f5e0771992"/>
+                </reportElement>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{lastName}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="290" y="0" width="110" height="30" uuid="e93530af-765b-4442-9b7c-aa182ec00467">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="e0a31328-ce3c-4e8a-857c-0fd12da34ca9"/>
+                </reportElement>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="400" y="0" width="70" height="30" uuid="29d65cc1-20c3-4e0e-88df-33c04d587535">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="9e269929-1e3c-4e06-b3c2-978862af02ae"/>
+                </reportElement>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{mobileNumber}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="470" y="0" width="80" height="30" uuid="f6a40a60-f883-4378-bf4f-abc22925c19f">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="d894c28b-7031-4e37-9946-fb188e86da81"/>
+                </reportElement>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{roleName}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="550" y="0" width="80" height="30" uuid="8e4969b3-ac68-4714-9b52-4b178dbb9651">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="c342d096-0b41-45e7-9ea3-1dce89e78169"/>
+                </reportElement>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{countryName}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="630" y="0" width="50" height="30" uuid="78d71156-4dd9-4b1b-9d5d-926f4456aa52">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="2833188c-b859-42e1-b5a9-e7c9457274a9"/>
+                </reportElement>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{activated} ? "Yes" : "No"]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="680" y="0" width="80" height="30" uuid="9c87b0c0-e5b0-44b7-9882-39bd5fe03291">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="082a1557-9dc0-48a0-9e06-272f2f7c5883"/>
+                </reportElement>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{createdByName}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="760" y="0" width="60" height="30" uuid="b6d49fea-098c-4685-b05a-d8709ffd0dbe">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="07355781-537c-44a0-af1f-4a96e0b8bde0"/>
+                </reportElement>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression>
+                    <![CDATA[new SimpleDateFormat("dd-MM-yyyy").format(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse(($F{createdDate}).toString()))]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="820" y="0" width="80" height="30" uuid="9e600158-c590-4bda-a6f9-c51bc035911f">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="1e78d5a1-754d-45ec-8b7b-b28b17b2f156"/>
+                </reportElement>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{lastModifiedByName}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="900" y="0" width="70" height="30" uuid="ed7fde53-3733-43ca-b248-082a64e1af17">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID"
+                              value="c1a98ecf-f012-47bd-a63b-bd8cdb47df2e"/>
+                </reportElement>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression>
+                    <![CDATA[new SimpleDateFormat("dd-MM-yyyy").format(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse(($F{lastModifiedDate}).toString()))]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="0" y="0" width="50" height="30" uuid="112a6e7a-d348-4cde-9c30-97bea63957f3"/>
+
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>

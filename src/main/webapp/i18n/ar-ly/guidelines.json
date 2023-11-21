@@ -1,0 +1,19 @@
+{
+    "guidelines":{
+        "guidelines_title":"القواعد الارشادية",
+        "guidelines_subtitle":"إرشادات لمتابعة",
+        "submission_format":"تنسيق تقديم المادة",
+        "submission_language":"لغة تقديم المادة",
+        "guidelines":"إرشادات المادة",
+        "guidelines_placeholder":"أدخل إرشادات مقالك ...",        
+        "Article_file_type":"نوع ملف المقالة",        
+        "Add_Category":"إضافة فئة",        
+        "Select_File_Type":"حدد أو أنشئ نوع الملف",        
+        "Select_File_Format":"حدد تنسيق الملف",        
+        "Select_Category":"حدد أو أنشئ فئة",
+        "Select_language":"اختار اللغة",        
+        "submission_format_required":"حدد تنسيقًا واحدًا على الأقل",        
+        "Select_language_required":"اختر لغة واحدة على الأقل",        
+        "Article_Guidelines_required":"مطلوب إرشادات المادة"
+    }
+}

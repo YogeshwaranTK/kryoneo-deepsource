@@ -1,0 +1,67 @@
+{
+  "Authors_Details": {
+    "Authors": "Authors",
+    "List_of_Authors_assigned_for_contribution": "List of Authors assigned for contribution",
+    "Author_Members": "Author Members",
+    "ADD_USER": "ADD USER",
+    "User_Name": "User Name",
+    "Role_Type": "Role Type",
+    "Action": "Action",
+    "Remove_User": "Remove User",
+    "No_result_found.": "No result found."
+  },
+  "Reviewers_Details": {
+    "Reviewers": "Reviewers",
+    "List_of_Reviewers_assigned_for_contribution": "List of Reviewers assigned for contribution",
+    "Reviewer_Members": "Reviewer Members",
+    "ADD_USER": "ADD USER",
+    "User_Name": "User Name",
+    "Role_Type": "Role Type",
+    "Action": "Action",
+    "Remove_User": "Remove User",
+    "No_result_found.": "No result found."
+  },
+  "Add_User_Details": {
+    "Add_User": "Add User",
+    "Search_User": "Search User",
+    "SUBMIT": "SUBMIT",
+    "CANCEL": "CANCEL",
+    "+ Create_User": "+ Create User"
+  },
+  "Editorial_Users_Details": {
+    "Editorial_Users": "Editorial Users",
+    "List_of_Editorial_Users_assigned_for_contribution": "List of Editorial Users assigned for contribution",
+    "Editorial_Members": "Editorial Members",
+    "ADD_USER": "ADD USER",
+    "User_Name": "User Name",
+    "Role_Type": "Role Type",
+    "Action": "Action",
+    "Remove_User": "Remove User",
+    "No_result_found.": "No result found."
+  },
+  "EDITORIAL_USERS": {
+    "ADD_EDITORIAL_USERS": "ADD EDITORIAL USERS",
+    "+ Create_User": "+ Create User",
+    "Add_Users": "Add Users",
+    "Search_User": "Search User",
+    "Select_Role": "Select Role",
+    "Create_New_Role": "Create New Role",
+    "Enter_New_Role": "Enter New Role",
+    "+ Create_New_Role": "+ Create New Role",
+    "+ Select_Default_Roles": "+ Select Default Roles",
+    "Submission": "Submission",
+    "Review": "Review",
+    "Copy_Editing": "Copy Editing",
+    "Production": "Production"
+  },
+  "user_and_role": {
+    "Authors": "Authors",
+    "Reviewers": "Reviewers",
+    "Editorial_Users": "Editorial Users"
+  },
+  "contributors_breadcrumb": {
+    "home": "home",
+    "journals": "journals",
+    "Users_&_Roles_Settings": "Users & Roles Settings"
+  }
+}

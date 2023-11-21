@@ -1,0 +1,226 @@
+{
+  "global": {
+    "title": "Kjms",
+    "browsehappy": "நிங்கள் உபயோக்கிப்பது <strong>காலாவதியான</strong> உலாவி. தயவுசெய்து  <a href=\"http://browsehappy.com/?locale=en\">உங்கள் உலாவியை மேம்படுத்தவும்</a>.",
+    "menu": {
+      "home": "முகப்பு",
+      "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+      "entities": {
+        "main": "பொருள்கள்",
+        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+      },
+      "account": {
+        "main": "கணக்கு",
+        "settings": "அமைப்புகள்",
+        "password": "கடவுச்சொல்",
+        "sessions": "பயன்பாடுகள்",
+        "login": "உள்நுழைக",
+        "logout": "வெளியேறுக",
+        "register": "பதிவு செய்க"
+      },
+      "admin": {
+        "main": "முக்கிய",
+        "userManagement": "பயனர் நிர்வாகம்",
+        "tracker": "பயனர் சுவடு",
+        "metrics": "அளவீடுகள்",
+        "health": "ஆரோக்கியம்",
+        "configuration": "கட்டமைப்பு",
+        "logs": "பதிவுகள்",
+        "apidocs": "எபிஐ ",
+        "database": "டேடாபேஸ்",
+        "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+      },
+      "language": "மொழி"
+    },
+    "form": {
+      "username.label": "பயனர் பெயர்",
+      "username.placeholder": "உங்கள் பயனர் பெயர்",
+      "newpassword.label": "புதிய கடவுச்சொல்",
+      "newpassword.placeholder": "புதிய கடவுச்சொல்",
+      "confirmpassword.label": "புதிய கடவுச்சொல் உறுதி செய்க",
+      "confirmpassword.placeholder": "புதிய கடவுச்சொல்",
+      "email.label": "மின்னஞ்சல்",
+      "email.placeholder": "உங்கள் மின்னஞ்சல்"
+    },
+    "messages": {
+      "info": {
+        "authenticated": {
+          "prefix": "",
+          "link": "அங்கீகரிக்க",
+          "suffix": ", நீங்கள் இயல்புநிலை கணக்குகள் முயற்சி செய்யலாம்:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\")."
+        },
+        "register": {
+          "noaccount": "உங்களுக்கு கணக்கு இல்லை?",
+          "link": "புதிய கணக்கு பதிவு செய்க!"
+        }
+      },
+      "error": {
+        "dontmatch": "கடவுச்சொல் மற்றும் அதன் உறுதி பொருந்தவில்லை!"
+      },
+      "validate": {
+        "newpassword": {
+          "required": "உங்கள் கடவுச்சொல் தேவைப்படுகிறது.",
+          "minlength": "உங்கள் கடவுச்சொல் குறைந்தது 4 எழுத்துக்கள் இருக்க வேண்டும்.",
+          "maxlength": "உங்கள் கடவுச்சொல்லை 50 எழுத்துக்களை விட அதிகமாக இருக்க முடியாது.",
+          "strength": "கடவுச்சொல் வலிமை:"
+        },
+        "confirmpassword": {
+          "required": "உங்கள் உறுதிப்படுத்தல் கடவுச்சொல்லை தேவைப்படுகிறது.",
+          "minlength": "உங்கள் உறுதிப்படுத்தல் கடவுச்சொல்லை குறைந்தது 4 எழுத்துக்கள் இருக்க வேண்டும்.",
+          "maxlength": "உங்கள் உறுதிப்படுத்தல் கடவுச்சொல்லை 50 எழுத்துக்களை விட அதிகமாக இருக்க முடியாது."
+        },
+        "email": {
+          "required": "உங்கள் மின்னஞ்சல் தேவைப்படுகிறது.",
+          "invalid": "உங்கள் மின்னஞ்சல் தவறானது.",
+          "minlength": "உங்கள் மின்னஞ்சல் குறைந்தது 5 எழுத்துக்கள் இருக்க வேண்டும்.",
+          "maxlength": "உங்கள் மின்னஞ்சல் 50 எழுத்துக்களை விட அதிகமாக இருக்க முடியாது."
+        }
+      }
+    },
+    "field": {
+      "id": "ஐடி"
+    },
+    "ribbon": {
+      "dev": "Development"
+    },
+    "item-count": "Showing {{first}} - {{second}} of {{total}} items.",
+    "experience": {
+      "experience": "பயனர் நட்பு தளத்தை அனுபவிக்கவும்",
+      "experience_content": "KJMS ஒரு சிறந்த ஜர்னல் மேலாண்மை தளமாகும். உள்நுழைவதற்கும் அங்கீகாரத்தை அணுகுவதற்கும் எளிய வழிமுறைகளை அனுபவியுங்கள்",
+      "learn": "மேலும் அறிய"
+    }
+  },
+  "entity": {
+    "action": {
+      "addblob": "பிளாப் சேர்க்க",
+      "addimage": "படம் சேர்க்க",
+      "back": "பின் செல்க",
+      "cancel": "ரத்து",
+      "delete": "நீக்கு",
+      "edit": "திருத்து",
+      "open": "Open",
+      "save": "சேமி",
+      "view": "பார்",
+      "show": "Show {{otherEntity}}"
+    },
+    "detail": {
+      "field": "களம்",
+      "value": "மதிப்பு"
+    },
+    "delete": {
+      "title": "நீக்குதலை உறுதி செய்க"
+    },
+    "validation": {
+      "required": "இந்த களம் தேவை.",
+      "minlength": "இந்த களத்தில் குறைந்தது {{min}} எழுத்துக்கள் இருக்க வேண்டும்.",
+      "maxlength": "இது களத்தில் {{max}} க்கும் மேற்பட்டு இருக்க முடியாது.",
+      "min": "இந்த களத்தில் {{min}} விட அதிகமாக இருக்க வேண்டும்.",
+      "max": "இது களத்தில் {{max}} விட அதிகமாக இருக்க முடியாது.",
+      "minbytes": "இந்த களம் {{min}} பைட்ஸ் விட அதிகமாக இருக்க வேண்டும்.",
+      "maxbytes": "இந்த களம் {{max}} பைட்ஸ் விட அதிகமாக இருக்க முடியாது.",
+      "pattern": "இந்த களம் {{pattern}} -ஐ பின்பற்ற வேண்டும்.",
+      "number": "இந்த களம் எண்ணாக இருக்க வேண்டும்.",
+      "datetimelocal": "இது களம் ஒரு தேதி மற்றும் நேரமாக இருக்க வேண்டும்."
+    },
+    "filters": {
+      "set": "Following filters are set",
+      "clear": "Clear filter",
+      "clearAll": "Clear all filters"
+    }
+  },
+  "error": {
+    "internalServerError": "Internal server error",
+    "server.not.reachable": "சர்வரை அடைய முடியவில்லை",
+    "url.not.found": "Not found",
+    "NotNull": "களம் {{fieldName}} காலியாக இருக்க கூடாது!",
+    "Size": "களம் {{fieldName}} தேவைகள் பூர்த்தி செய்யவில்லை!",
+    "userexists": "உள் நுழை பெயர் எடுக்கப்பட்டது!",
+    "emailexists": "மின்னஞ்சல் உபயோகிக்கப்பட்டது!",
+    "idexists": "புது {{entityName}} -க்கு ஐ.டி இருக்கமுடியாது",
+    "idnull": "Invalid ID",
+    "idinvalid": "Invalid Id",
+    "idnotfound": "ID cannot be found",
+    "file": {
+      "could.not.extract": "Could not extract file",
+      "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
+    }
+  },
+  "footer": "இது உங்கள் முடிப்பு",
+  "search": "தேடல்",
+  "show_result": "இதற்கான முடிவுகளைக் காட்டுகிறது",
+  "items": "பொருள்",
+  "entries": "உள்ளீடுகள்",
+  "to":"செய்ய",
+  "of":"இன்",
+  "yes":"ஆம்",
+  "no":"இல்லை",
+  "notification": {
+    "Notification": "அறிவிப்பு",
+    "NoNotifyFound": "எந்த அறிவிப்பும் இல்லை"
+  },
+  "buttons": {
+    "create": "உருவாக்க",
+    "reset": "மீட்டமை",
+    "submit": "சமர்ப்பிக்க",
+    "cancel": "ரத்து செய்",
+    "ResetPassword": "கடவுச்சொல்லை மீட்டமைக்க",
+    "update": "புதுப்பிக்கவும்",
+    "no": "இல்லை",
+    "yes": "ஆம்",
+    "clearAllCamel": "அனைத்தையும் அழி"
+  },
+  "table": {
+    "UserName": "பயனர் பெயர்",
+    "CreatedOn": "அன்று உருவாக்கப்பட்ட",
+    "Status": "நிலை",
+    "Action": "செயல்",
+    "NoResultsFound": "முடிவுகள் எதுவும் இல்லை",
+    "UpdatedOn": "புதுப்பிக்கப்பட்டது"
+  },
+  "status": {
+    "Active": "செயலில்",
+    "Inactive": "செயலற்றது"
+  },
+  "dropdowns": {
+    "Edit": "தொகு",
+    "Delete": "அழி"
+  },
+  "inputFields": {
+    "FullName": "முழு பெயர்",
+    "Email": "மின்னஞ்சல்",
+    "Gender": "பாலினம்",
+    "AddressLineOne": "முகவரி வரி 1",
+    "AddressLineTwo": "முகவரி வரி 2",
+    "Country": "நாடு",
+    "City": "நகரம்",
+    "State": "நிலை",
+    "PinCode": "அஞ்சல் குறியீடு",
+    "MobileNumber": "கைபேசி எண்"
+  },
+  "PlaceHolders": {
+    "fullName": "உங்கள் முழுப் பெயரை உள்ளிடவும்",
+    "Email": "மின்னஞ்சல் முகவரியை உள்ளிடவும்",
+    "Gender": "பாலினத்தைத் தேர்ந்தெடுக்கவும்",
+    "AddressLineOne": "முகவரி வரி 1 ஐ உள்ளிடவும்",
+    "AddressLineTwo": "முகவரி வரி 2 ஐ உள்ளிடவும்",
+    "Country": "நாட்டினை தேர்வுசெய்",
+    "City": "நகரத்தை உள்ளிடவும்",
+    "State": "மாநிலம்/ மாகாணத்தை உள்ளிடவும்",
+    "PinCode": "பின் குறியீட்டை உள்ளிடவும்",
+    "PostCode": "குறியீட்டைத் தேர்ந்தெடுக்கவும்",
+    "MobileNumber": "மொபைல் எண்ணை உள்ளிடவும்",
+    "Roles": "பாத்திரங்களைத் தேர்ந்தெடுக்கவும்",
+    "SelectJournal": "ஜர்னலைத் தேர்ந்தெடுக்கவும்",
+    "SelectJournalGroup": "ஜர்னல் குழுவைத் தேர்ந்தெடுக்கவும்",
+    "EnterYourORCID": "உங்கள் ORCID ஐ உள்ளிடவும்"
+  },
+  "inputValidations": {
+    "fullNameRequired": "முழு பெயர் தேவை",
+    "emailRequired": "மின்னஞ்சல் முகவரி தேவை",
+    "emailInvalid": "தவறான மின்னஞ்சல் முகவரி",
+    "MaxLen320": "அதிகபட்ச நீளம் 320 எழுத்துகளாக இருக்க வேண்டும்",
+    "MobileNumberRequired": "மொபைல் எண் தேவை",
+    "allowedOnlyNumbers": "எண்கள் மட்டுமே அனுமதிக்கப்படுகின்றன"
+
+  }
+}

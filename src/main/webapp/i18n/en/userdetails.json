@@ -1,0 +1,16 @@
+{
+  "userdetails_Beadcrumb": {
+    "Home": "Home",
+    "User_Details": "User Details"
+  },
+  "userdetails":{
+    "User_Details_title": "User Details",
+    "User_Details_subtitle": "User full Details",
+    "Full_Name": "Full Name",
+    "Email_Address": "Email Address",
+    "Created_Date_And_Time": "Created Date And Time",
+    "Created_By": "Created By",
+    "Activated": "Activated"
+
+}
+}

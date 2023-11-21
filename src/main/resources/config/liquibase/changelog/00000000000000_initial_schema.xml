@@ -1,0 +1,1984 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <changeSet id="00000000000001" author="developer">
+        <createTable tableName="jm_language">
+            <column name="lang_key" type="VARCHAR(10)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_language"/>
+            </column>
+            <column name="name" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="jm_country">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_country"/>
+            </column>
+            <column name="iso" type="VARCHAR(2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nice_name" type="VARCHAR(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="iso3" type="VARCHAR(3)"/>
+            <column name="number_code" type="VARCHAR(11)"/>
+            <column name="phone_code" type="VARCHAR(11)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="jm_user">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_user"/>
+            </column>
+            <column name="password_hash" type="VARCHAR(60)"/>
+            <column name="full_name" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(254)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="activated" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lang_key" type="VARCHAR(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="image_url" type="VARCHAR(256)"/>
+            <column name="state_province" type="VARCHAR(255)"/>
+            <column name="country_id" type="BIGINT"/>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="deleted_remarks" type="TEXT"/>
+            <column name="otp" type="VARCHAR(6)"/>
+            <column name="otp_expiry_dt" type="DATETIME"/>
+            <column name="otp_verification_key" type="VARCHAR(255)"/>
+            <column name="is_email_verified" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="password_expiry_time" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_at" type="DATETIME"/>
+            <column name="mobile_number" type="VARCHAR(30)"/>
+            <column name="phone_code" type="VARCHAR(11)"/>
+            <column name="otp_count" type="INT"/>
+            <column name="gender" type="VARCHAR(10)"/>
+            <column name="city" type="VARCHAR(200)"/>
+            <column name="address_line1" type="TEXT"/>
+            <column name="address_line2" type="TEXT"/>
+            <column name="pin_code" type="VARCHAR(20)"/>
+            <column name="orcid" type="VARCHAR(20)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="country_id" baseTableName="jm_user"
+                                 constraintName="FK_JM_USER_COUNTRY_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_country"/>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_user"
+                                 constraintName="FK_JM_USER_CREATED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="last_modified_by" baseTableName="jm_user"
+                                 constraintName="FK_JM_USER_LAST_MODIFIED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_role">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_role"/>
+            </column>
+            <column name="name" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="default_role_type" type="VARCHAR(255)"/>
+            <column name="deleted_remarks" type="TEXT"/>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_at" type="DATETIME"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_role"
+                                 constraintName="FK_JM_ROLE_CREATED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="last_modified_by" baseTableName="jm_role"
+                                 constraintName="FK_JM_ROLE_LAST_MODIFIED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+
+
+        <createTable tableName="jm_role_permission">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_role_permission"/>
+            </column>
+            <column name="role_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="permission" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="role_id" baseTableName="jm_role_permission"
+                                 constraintName="FK_JM_ROLE_PERMISSION_ROLE_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_role"/>
+
+
+
+        <createTable tableName="jm_category">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_category"/>
+            </column>
+            <column name="name" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="parent_id" type="VARCHAR(255)"/>
+        </createTable>
+        <addUniqueConstraint columnNames="name" constraintName="uc_jm_category_name" tableName="jm_category"/>
+        <addForeignKeyConstraint baseColumnNames="parent_id" baseTableName="jm_category"
+                                 constraintName="FK_JM_CATEGORY_PARENT_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_category"/>
+
+        <createTable tableName="jm_submission_file_format">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_submission_file_format"/>
+            </column>
+            <column name="name" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_extension" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="deleted_remarks" type="TEXT"/>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_at" type="DATETIME"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_submission_file_format"
+                                 constraintName="FK_JM_SUBMISSION_FILE_FORMAT_CREATED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="last_modified_by" baseTableName="jm_submission_file_format"
+                                 constraintName="FK_JM_SUBMISSION_FILE_FORMAT_LAST_MODIFIED_BY"
+                                 referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_submission_article_file_type">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_submission_article_file_type"/>
+            </column>
+            <column name="name" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_default" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="deleted_remarks" type="TEXT"/>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_at" type="DATETIME"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_submission_article_file_type"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_FILE_TYPE_CREATED_BY"
+                                 referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="last_modified_by" baseTableName="jm_submission_article_file_type"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_FILE_TYPE_LAST_MODIFIED_BY"
+                                 referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_journal">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_journal"/>
+            </column>
+            <column name="title" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="TEXT"/>
+            <column name="thumbnail" type="VARCHAR(100)"/>
+            <column name="summary" type="TEXT"/>
+            <column name="published" type="BOOLEAN"/>
+            <column name="editor_chief" type="VARCHAR(50)"/>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="online_issn" type="VARCHAR(10)"/>
+            <column name="print_issn" type="VARCHAR(10)"/>
+            <column name="published_at" type="DATETIME"/>
+            <column name="deleted_remarks" type="TEXT"/>
+            <column name="abbreviation" type="TEXT"/>
+            <column name="initials" type="VARCHAR(255)"/>
+            <column name="guidelines" type="TEXT"/>
+            <column name="copyright_notice" type="TEXT"/>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_at" type="DATETIME"/>
+            <column name="j_key" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="storage_container_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="completed_step" type="INT"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_journal"
+                                 constraintName="FK_JM_JOURNAL_CREATED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="last_modified_by" baseTableName="jm_journal"
+                                 constraintName="FK_JM_JOURNAL_LAST_MODIFIED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_journal_category">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_journal_category"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="category_id" baseTableName="jm_journal_category"
+                                 constraintName="FK_JM_JOURNAL_CATEGORY_CATEGORY_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_category"/>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_journal_category"
+                                 constraintName="FK_JM_JOURNAL_CATEGORY_CREATED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_journal_category"
+                                 constraintName="FK_JM_JOURNAL_CATEGORY_JOURNAL_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_journal"/>
+
+        <createTable tableName="jm_journal_group">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_journal_group"/>
+            </column>
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_default" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="deleted_remarks" type="TEXT"/>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_at" type="DATETIME"/>
+            <column name="default_group_type" type="VARCHAR(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_journal_group"
+                                 constraintName="FK_JM_JOURNAL_GROUP_CREATED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_journal_group"
+                                 constraintName="FK_JM_JOURNAL_GROUP_JOURNAL_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="last_modified_by" baseTableName="jm_journal_group"
+                                 constraintName="FK_JM_JOURNAL_GROUP_LAST_MODIFIED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_journal_group_permission">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_journal_group_permission"/>
+            </column>
+            <column name="journal_group_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_perm_id" type="VARCHAR(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="journal_group_id" baseTableName="jm_journal_group_permission"
+                                 constraintName="FK_JM_JOURNAL_GROUP_PERMISSION_JOURNAL_GROUP_ID"
+                                 referencedColumnNames="id" referencedTableName="jm_journal_group"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_journal_group_permission"
+                                 constraintName="FK_JM_JOURNAL_GROUP_PERMISSION_JOURNAL_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_journal"/>
+
+        <createTable tableName="jm_journal_submission_lang">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_journal_submission_lang"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lang_key" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_at" type="DATETIME"/>
+            <column name="deleted_remarks" type="TEXT"/>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_journal_submission_lang"
+                                 constraintName="FK_JM_JOURNAL_SUBMISSION_LANG_CREATED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_journal_submission_lang"
+                                 constraintName="FK_JM_JOURNAL_SUBMISSION_LANG_JOURNAL_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="lang_key" baseTableName="jm_journal_submission_lang"
+                                 constraintName="FK_JM_JOURNAL_SUBMISSION_LANG_LANG_KEY"
+                                 referencedColumnNames="lang_key" referencedTableName="jm_language"/>
+        <addForeignKeyConstraint baseColumnNames="last_modified_by" baseTableName="jm_journal_submission_lang"
+                                 constraintName="FK_JM_JOURNAL_SUBMISSION_LANG_LAST_MODIFIED_BY"
+                                 referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_submission_article">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_submission_article"/>
+            </column>
+            <column name="status" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="prefix" type="VARCHAR(50)"/>
+            <column name="last_updated_prefix" type="VARCHAR(50)"/>
+            <column name="title" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_updated_title" type="VARCHAR(100)"/>
+            <column name="sub_title" type="VARCHAR(100)"/>
+            <column name="last_updated_sub_title" type="VARCHAR(100)"/>
+            <column name="description" type="TEXT"/>
+            <column name="last_updated_desc" type="TEXT"/>
+            <column name="decline_remarks" type="TEXT"/>
+            <column name="decline_by" type="VARCHAR(255)"/>
+            <column name="decline_date" type="DATETIME"/>
+            <column name="submitted_date" type="DATETIME"/>
+            <column name="submitted_accept_date" type="DATETIME"/>
+            <column name="submitted_accept_by" type="VARCHAR(255)"/>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_lang_id" type="BIGINT"/>
+            <column name="author_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_at" type="DATETIME"/>
+            <column name="deleted_remarks" type="TEXT"/>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="agree" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="workflow_stage" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="author_id" baseTableName="jm_submission_article"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_AUTHOR_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_submission_article"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_CREATED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="decline_by" baseTableName="jm_submission_article"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_DECLINE_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_submission_article"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_JOURNAL_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="journal_lang_id" baseTableName="jm_submission_article"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_JOURNAL_LANG_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_journal_submission_lang"/>
+        <addForeignKeyConstraint baseColumnNames="last_modified_by" baseTableName="jm_submission_article"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_LAST_MODIFIED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="submitted_accept_by" baseTableName="jm_submission_article"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_SUBMITTED_ACCEPT_BY"
+                                 referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_submission_article_keyword">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_submission_article_keyword"/>
+            </column>
+            <column name="keyword" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sub_article_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="deleted_at" type="DATETIME"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_submission_article_keyword"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_KEYWORD_JOURNAL_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="sub_article_id" baseTableName="jm_submission_article_keyword"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_KEYWORD_SUB_ARTICLE_ID"
+                                 referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+
+        <createTable tableName="jm_submission_article_category">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_submission_article_category"/>
+            </column>
+            <column name="sub_article_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_category_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="deleted_at" type="DATETIME"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="journal_category_id" baseTableName="jm_submission_article_category"
+                                 constraintName="FK_JM_SUB_ARTICLE_CATEGORY_CAT_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_journal_category"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_submission_article_category"
+                                 constraintName="FK_JM_SUB_ARTICLE_CATEGORY_JOURNAL_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="sub_article_id" baseTableName="jm_submission_article_category"
+                                 constraintName="FK_JM_SUB_ARTICLE_CATEGORY_SUB_ARTICLE_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_submission_article"/>
+
+        <createTable tableName="jm_submission_article_author">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_submission_article_author"/>
+            </column>
+            <column name="prefix" type="VARCHAR(50)"/>
+            <column name="first_name" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sur_name" type="VARCHAR(30)"/>
+            <column name="middle_name" type="VARCHAR(30)"/>
+            <column name="email" type="VARCHAR(200)"/>
+            <column name="orcid_id" type="VARCHAR(50)"/>
+            <column name="is_primary" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sub_article_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="deleted_remarks" type="TEXT"/>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="VARCHAR(255)"/>
+            <column name="last_modified_at" type="DATETIME"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_submission_article_author"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_AUTHOR_CREATED_BY" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_submission_article_author"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_AUTHOR_JOURNAL_ID" referencedColumnNames="id"
+                                 referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="last_modified_by" baseTableName="jm_submission_article_author"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_AUTHOR_LAST_MODIFIED_BY"
+                                 referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="sub_article_id" baseTableName="jm_submission_article_author"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_AUTHOR_SUB_ARTICLE_ID"
+                                 referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+
+        <createTable tableName="jm_notification">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_notification"/>
+            </column>
+            <column name="title_key" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="desc_key" type="VARCHAR(1200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="notify_to" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="title_values" type="VARCHAR(255)"/>
+            <column name="desc_values" type="VARCHAR(255)"/>
+            <column name="is_read" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="notify_to" baseTableName="jm_notification"
+                                 constraintName="FK_JM_NOTIFICATION_NOTIFY_TO" referencedColumnNames="id"
+                                 referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_submission_article_author_affiliation">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"
+                             primaryKeyName="pk_jm_submission_article_author_affiliation"/>
+            </column>
+            <column name="affiliation" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sub_article_author_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sub_article_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_submission_article_author_affiliation"
+                                 constraintName="FK_JM_SUBMISSION_ARTICLE_AUTHOR_AFFILIATION_JOURNAL_ID"
+                                 referencedColumnNames="id" referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="sub_article_author_id"
+                                 baseTableName="jm_submission_article_author_affiliation"
+                                 constraintName="FK_JM_SUB_ARTICLE_AUTHOR_AFFILIATION_SUB_ARTICLE_AUTHOR_ID"
+                                 referencedColumnNames="id" referencedTableName="jm_submission_article_author"/>
+        <addForeignKeyConstraint baseColumnNames="sub_article_id"
+                                 baseTableName="jm_submission_article_author_affiliation"
+                                 constraintName="FK_JM_SUB_ARTICLE_AUTHOR_AFFILIATION_SUB_ARTICLE_ID"
+                                 referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+
+        <createTable tableName="jm_file_type">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_file_type"/>
+            </column>
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_default" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="jm_journal_file_type">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_journal_file_type"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="deleted_by" type="VARCHAR(255)"/>
+            <column name="deleted_at" type="DATETIME"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_journal_file_type" constraintName="FK_JM_JOURNAL_FILE_TYPE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="deleted_by" baseTableName="jm_journal_file_type" constraintName="FK_JM_JOURNAL_FILE_TYPE_DELETED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="file_type_id" baseTableName="jm_journal_file_type" constraintName="FK_JM_JOURNAL_FILE_TYPE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_journal_file_type" constraintName="FK_JM_JOURNAL_FILE_TYPE_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+
+
+        <createTable tableName="jm_copy_edited_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_copy_edited_file"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_copy_edited_file" constraintName="FK_JM_COPY_EDITED_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="file_type" baseTableName="jm_copy_edited_file" constraintName="FK_JM_COPY_EDITED_FILE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_copy_edited_file" constraintName="FK_JM_COPY_EDITED_FILE_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_copy_edited_file" constraintName="FK_JM_COPY_EDITED_FILE_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+
+        <createTable tableName="jm_copy_editing_contributor">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_copy_editing_contributor"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_copy_editing_contributor" constraintName="FK_JM_COPY_EDITING_CONTRIBUTOR_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_copy_editing_contributor" constraintName="FK_JM_COPY_EDITING_CONTRIBUTOR_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_copy_editing_contributor" constraintName="FK_JM_COPY_EDITING_CONTRIBUTOR_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_copy_editing_discussion">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_copy_editing_discussion"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="topic" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="TEXT"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_copy_editing_discussion" constraintName="FK_JM_COPY_EDITING_DISCUSSION_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_copy_editing_discussion" constraintName="FK_JM_COPY_EDITING_DISCUSSION_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_copy_editing_discussion" constraintName="FK_JM_COPY_EDITING_DISCUSSION_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_copy_editing_discussion" constraintName="FK_JM_COPY_EDITING_DISCUSSION_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_copy_editing_discussion_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_copy_editing_discussion_file"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_copy_editing_discussion_file" constraintName="FK_JM_COPY_EDITING_DISCUSSION_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="file_type_id" baseTableName="jm_copy_editing_discussion_file" constraintName="FK_JM_COPY_EDITING_DISCUSSION_FILE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_copy_editing_discussion_file" constraintName="JM_COPY_EDITING_DISCUSSION_FILE_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_copy_editing_discussion"/>
+
+        <createTable tableName="jm_copy_editing_discussion_user">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_copy_editing_discussion_user"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_copy_editing_discussion_user" constraintName="FK_JM_COPY_EDITING_DISCUSSION_USER_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_copy_editing_discussion_user" constraintName="FK_JM_COPY_EDITING_DISCUSSION_USER_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_copy_editing_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_copy_editing_discussion_user" constraintName="FK_JM_COPY_EDITING_DISCUSSION_USER_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_copy_editing_discussion_message">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_copy_editing_discussion_message"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="message" type="TEXT"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_copy_editing_discussion_message" constraintName="FKJM_COPY_EDITING_DISCUSSION_MESSAGE_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_copy_editing_discussion_message" constraintName="FK_JM_COPY_EDITING_DISCUSSION_MESSAGE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_copy_editing_discussion_message" constraintName="FK_JM_COPY_EDITING_DISCUSSION_MESSAGE_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_copy_editing_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_copy_editing_discussion_message" constraintName="FK_JM_COPY_EDITING_DISCUSSION_MESSAGE_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_copy_editing_discussion_message" constraintName="FK_JM_COPY_EDITING_DISCUSSION_MESSAGE_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_copy_editing_discussion_message_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_copy_editing_discussion_message_file"/>
+            </column>
+            <column name="message_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_copy_editing_discussion_message_file" constraintName="FK_JM_COPY_EDITING_DISCUSSION_MESSAGE_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="file_type" baseTableName="jm_copy_editing_discussion_message_file" constraintName="FK_JM_COPY_EDITING_DISCUSSION_MESSAGE_FILE_FILE_TYPE" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="message_id" baseTableName="jm_copy_editing_discussion_message_file" constraintName="FK_JM_COPY_EDITING_DISCUSSION_MESSAGE_FILE_USER_ID" referencedColumnNames="id" referencedTableName="jm_copy_editing_discussion_message"/>
+
+        <createTable tableName="jm_copy_editing_draft_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_copy_editing_draft_file"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_copy_editing_draft_file" constraintName="FK_JM_COPY_EDITING_DRAFT_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="file_type" baseTableName="jm_copy_editing_draft_file" constraintName="FK_JM_COPY_EDITING_DRAFT_FILE_FILE_TYPE" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_copy_editing_draft_file" constraintName="FK_JM_COPY_EDITING_DRAFT_FILE_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_copy_editing_draft_file" constraintName="FK_JM_COPY_EDITING_DRAFT_FILE_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+
+        <createTable tableName="jm_journal_author">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_journal_author"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="deleted_remarks" type="TEXT"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_journal_author" constraintName="FK_JM_JOURNAL_AUTHOR_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_journal_author" constraintName="FK_JM_JOURNAL_AUTHOR_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_journal_author" constraintName="FK_JM_JOURNAL_AUTHOR_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_journal_checklist">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_journal_checklist"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="checklist_item" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="display_position" type="INT"/>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_journal_checklist" constraintName="FK_JM_JOURNAL_CHECKLIST_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+
+        <createTable tableName="jm_journal_editorial_role">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_journal_editorial_role"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role_type" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_submission_enable" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_review_enable" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_copy_editing_enable" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_production_enable" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_default" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_journal_editorial_role" constraintName="FK_JM_JOURNAL_EDITORIAL_ROLE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_journal_editorial_role" constraintName="FK_JM_JOURNAL_EDITORIAL_ROLE_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+
+        <createTable tableName="jm_journal_editorial_user">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_journal_editorial_user"/>
+            </column>
+            <column name="journal_editorial_role_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="deleted_remarks" type="TEXT"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_journal_editorial_user" constraintName="FK_JM_JOURNAL_EDITORIAL_USER_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_editorial_role_id" baseTableName="jm_journal_editorial_user" constraintName="FK_JM_JOURNAL_EDITORIAL_USER_JOURNAL_EDITORIAL_ROLE_ID" referencedColumnNames="id" referencedTableName="jm_journal_editorial_role"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_journal_editorial_user" constraintName="FK_JM_JOURNAL_EDITORIAL_USER_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_journal_reviewer">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_journal_reviewer"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="deleted_remarks" type="TEXT"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_journal_reviewer" constraintName="FK_JM_JOURNAL_REVIEWER_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_journal_reviewer" constraintName="FK_JM_JOURNAL_REVIEWER_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_journal_reviewer" constraintName="FK_JM_JOURNAL_REVIEWER_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_mail_template">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_mail_template"/>
+            </column>
+            <column name="is_active" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="html" type="VARCHAR(255)"/>
+        </createTable>
+
+        <createTable tableName="jm_mail_to">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_mail_to"/>
+            </column>
+            <column name="mail_to_variable" type="VARCHAR(255)"/>
+            <column name="mail_to" type="VARCHAR(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="mail_to" baseTableName="jm_mail_to" constraintName="FK_JM_MAIL_TO_ON_MAIL_TO" referencedColumnNames="id" referencedTableName="jm_mail_template"/>
+
+        <createTable tableName="jm_production_completed_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_production_completed_file"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_file_type" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_production_completed_file" constraintName="FK_JM_PRODUCTION_COMPLETED_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_file_type" baseTableName="jm_production_completed_file" constraintName="FK_JM_PRODUCTION_COMPLETED_FILE_JOURNAL_FILE_TYPE" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_production_completed_file" constraintName="FK_JM_PRODUCTION_COMPLETED_FILE_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+
+        <createTable tableName="jm_production_contributor">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_production_contributor"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_production_contributor" constraintName="FK_JM_PRODUCTION_CONTRIBUTOR_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_production_contributor" constraintName="FK_JM_PRODUCTION_CONTRIBUTOR_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_production_contributor" constraintName="FK_JM_PRODUCTION_CONTRIBUTOR_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_production_discussion">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_production_discussion"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="topic" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="TEXT"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_production_discussion" constraintName="FK_JM_PRODUCTION_DISCUSSION_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_production_discussion" constraintName="FK_JM_PRODUCTION_DISCUSSION_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_production_discussion" constraintName="FK_JM_PRODUCTION_DISCUSSION_SUBMISSION_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_production_discussion" constraintName="FK_JM_PRODUCTION_DISCUSSION_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_production_discussion_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_production_discussion_file"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_production_discussion_file" constraintName="FK_JM_PRODUCTION_DISCUSSION_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_production_discussion_file" constraintName="FK_JM_PRODUCTION_DISCUSSION_FILE_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_production_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="file_type" baseTableName="jm_production_discussion_file" constraintName="FK_JM_PRODUCTION_DISCUSSION_FILE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+
+        <createTable tableName="jm_production_discussion_user">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_production_discussion_user"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_production_discussion_user" constraintName="FK_JM_PRODUCTION_DISCUSSION_USER_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_production_discussion_user" constraintName="FK_JM_PRODUCTION_DISCUSSION_USER_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_production_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_production_discussion_user" constraintName="FK_JM_PRODUCTION_DISCUSSION_USER_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_production_discussion_message">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_production_discussion_message"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="message" type="TEXT"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_production_discussion_message" constraintName="FK_JM_PRODUCTION_DISCUSSION_MESSAGE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_production_discussion_message" constraintName="FK_JM_PRODUCTION_DISCUSSION_MESSAGE_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_production_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_production_discussion_message" constraintName="FK_JM_PRODUCTION_DISCUSSION_MESSAGE_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_production_discussion_message" constraintName="FK_JM_PRODUCTION_DISCUSSION_MESSAGE_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_production_discussion_message" constraintName="FK_JM_PRODUCTION_DISCUSSION_MESSAGE_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_production_discussion_message_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_production_discussion_message_file"/>
+            </column>
+            <column name="message_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_production_discussion_message_file" constraintName="FK_JM_PRODUCTION_DISCUSSION_MESSAGE_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="file_type_id" baseTableName="jm_production_discussion_message_file" constraintName="FK_JM_PRODUCTION_DISCUSSION_MESSAGE_FILE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="message_id" baseTableName="jm_production_discussion_message_file" constraintName="FK_JM_PRODUCTION_DISCUSSION_MESSAGE_FILE_MESSAGE_ID" referencedColumnNames="id" referencedTableName="jm_production_discussion_message"/>
+
+        <createTable tableName="jm_production_ready_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_production_ready_file"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="notes" type="VARCHAR(500)"/>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_file_type" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_production_ready_file" constraintName="FK_JM_PRODUCTION_READY_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_file_type" baseTableName="jm_production_ready_file" constraintName="FK_JM_PRODUCTION_READY_FILE_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_production_ready_file" constraintName="FK_JM_PRODUCTION_READY_FILE_SUBMISSION_IDzH3g7O" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+
+        <createTable tableName="jm_review_round">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round"/>
+            </column>
+            <column name="round" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round" constraintName="FK_JM_REVIEW_ROUND_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_review_round" constraintName="FK_JM_REVIEW_ROUND_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_review_round" constraintName="FK_JM_REVIEW_ROUND_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+
+        <createTable tableName="jm_review_round_reviewer">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_reviewer"/>
+            </column>
+            <column name="journal_reviewer_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="review_round_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="submission_review_type" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="review_current_status" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="reviewer_response" type="VARCHAR(255)"/>
+            <column name="editor_and_author_comment" type="TEXT"/>
+            <column name="editor_comment" type="TEXT"/>
+            <column name="rating" type="SMALLINT"/>
+            <column name="reject_reason" type="VARCHAR(255)"/>
+            <column name="review_completed_at" type="DATETIME"/>
+            <column name="review_requested_date" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="review_due_date" type="DATETIME"/>
+            <column name="response_due_date" type="DATETIME"/>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="journal_reviewer_id" baseTableName="jm_review_round_reviewer" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_JOURNAL_REVIEWER_ID" referencedColumnNames="id" referencedTableName="jm_journal_reviewer"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_id" baseTableName="jm_review_round_reviewer" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_REVIEW_ROUND_ID" referencedColumnNames="id" referencedTableName="jm_review_round"/>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_reviewer" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_REVIEW_ROUND_REVIEWER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_reviewer_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_reviewer_file"/>
+            </column>
+            <column name="review_round_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="review_round_reviewer_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_reviewer_file" constraintName="FK_JM_REVIEWER_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="file_type_id" baseTableName="jm_reviewer_file" constraintName="FK_JM_REVIEWER_FILE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_id" baseTableName="jm_reviewer_file" constraintName="FK_JM_REVIEWER_FILE_REVIEW_ROUND_ID" referencedColumnNames="id" referencedTableName="jm_review_round"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_reviewer_id" baseTableName="jm_reviewer_file" constraintName="FK_JM_REVIEWER_FILE_REVIEW_ROUND_REVIEWER_ID" referencedColumnNames="id" referencedTableName="jm_review_round_reviewer"/>
+
+        <createTable tableName="jm_reviewer_reply_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_reviewer_reply_file"/>
+            </column>
+            <column name="review_round_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="review_round_reviewer_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_reviewer_reply_file" constraintName="FK_JM_REVIEWER_REPLY_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_id" baseTableName="jm_reviewer_reply_file" constraintName="FK_JM_REVIEWER_REPLY_FILE_REVIEW_ROUND_ID" referencedColumnNames="id" referencedTableName="jm_review_round"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_reviewer_id" baseTableName="jm_reviewer_reply_file" constraintName="FK_JM_REVIEWER_REPLY_FILE_REVIEW_ROUND_REVIEWER_ID" referencedColumnNames="id" referencedTableName="jm_review_round_reviewer"/>
+
+        <createTable tableName="jm_review_round_contributor">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_contributor"/>
+            </column>
+            <column name="review_round_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_contributor" constraintName="FK_JM_REVIEW_ROUND_CONTRIBUTOR_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_id" baseTableName="jm_review_round_contributor" constraintName="FK_JM_REVIEW_ROUND_CONTRIBUTOR_REVIEW_ROUND_ID" referencedColumnNames="id" referencedTableName="jm_review_round"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_review_round_contributor" constraintName="FK_JM_REVIEW_ROUND_CONTRIBUTOR_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_review_round_discussion">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_discussion"/>
+            </column>
+            <column name="review_round_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="topic" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="TEXT"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_discussion" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_id" baseTableName="jm_review_round_discussion" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_REVIEW_ROUND_ID" referencedColumnNames="id" referencedTableName="jm_review_round"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_review_round_discussion" constraintName="FK_M_REVIEW_ROUND_DISCUSSION_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_review_round_discussion_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_discussion_file"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_discussion_file" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_review_round_discussion_file" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_FILE_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_review_round_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="file_type" baseTableName="jm_review_round_discussion_file" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_FILE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+
+        <createTable tableName="jm_review_round_discussion_user">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_discussion_user"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_discussion_user" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_USER_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_review_round_discussion_user" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_USER_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_review_round_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_review_round_discussion_user" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_USER_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_review_round_discussion_message">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_discussion_message"/>
+            </column>
+            <column name="review_round_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="message" type="TEXT"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_review_round_discussion_message" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_MESSAGE_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_review_round_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_id" baseTableName="jm_review_round_discussion_message" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_MESSAGE_REVIEW_ROUND_ID" referencedColumnNames="id" referencedTableName="jm_review_round"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_review_round_discussion_message" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_MESSAGE_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_discussion_message" constraintName="FK_M_REVIEW_ROUND_DISCUSSION_MESSAGE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_review_round_discussion_message_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_discussion_message_file"/>
+            </column>
+            <column name="message_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_discussion_message_file" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_MESSAGE_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="file_type_id" baseTableName="jm_review_round_discussion_message_file" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_MESSAGE_FILE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="message_id" baseTableName="jm_review_round_discussion_message_file" constraintName="FK_JM_REVIEW_ROUND_DISCUSSION_MESSAGE_FILE_MESSAGE_ID" referencedColumnNames="id" referencedTableName="jm_review_round_discussion_message"/>
+
+        <createTable tableName="jm_review_round_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_file"/>
+            </column>
+            <column name="review_round_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_file" constraintName="FK_JM_REVIEW_ROUND_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="file_type_id" baseTableName="jm_review_round_file" constraintName="FK_JM_REVIEW_ROUND_FILE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_id" baseTableName="jm_review_round_file" constraintName="FK_JM_REVIEW_ROUND_FILE_REVIEW_ROUND_ID" referencedColumnNames="id" referencedTableName="jm_review_round"/>
+
+        <createTable tableName="jm_review_round_reviewer_contributor">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_reviewer_contributor"/>
+            </column>
+            <column name="review_round_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_reviewer_contributor" constraintName="FK_JM_REVIEW_ROUND_CONTRIBUTOR_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_id" baseTableName="jm_review_round_reviewer_contributor" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_CONTRIBUTOR_REVIEW_ROUND_ID" referencedColumnNames="id" referencedTableName="jm_review_round"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_id" baseTableName="jm_review_round_reviewer_contributor" constraintName="FK_JM_REVIEW_ROUND__REVIEWER_CONTRIBUTOR_REVIEW_ROUND_ID" referencedColumnNames="id" referencedTableName="jm_review_round_reviewer"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_review_round_reviewer_contributor" constraintName="FK_JM_REVIEW_ROUND__REVIEWER_CONTRIBUTOR_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_review_round_reviewer_discussion">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_reviewer_discussion"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="topic" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="TEXT"/>
+            <column name="review_round_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_reviewer_discussion" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_id" baseTableName="jm_review_round_reviewer_discussion" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_REVIEW_ROUND_ID" referencedColumnNames="id" referencedTableName="jm_review_round"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_review_round_reviewer_discussion" constraintName="FK_M_REVIEW_ROUND_REVIEWER_DISCUSSION_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_review_round_reviewer_discussion_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_reviewer_discussion_file"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_reviewer_discussion_file" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_review_round_reviewer_discussion_file" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_FILE_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_review_round_reviewer_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="file_type" baseTableName="jm_review_round_reviewer_discussion_file" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_FILE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+
+        <createTable tableName="jm_review_round_reviewer_discussion_member">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_reviewer_discussion_member"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_reviewer_discussion_member" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_USER_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_review_round_reviewer_discussion_member" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_USER_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_review_round_reviewer_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_review_round_reviewer_discussion_member" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_USER_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_review_round_reviewer_discussion_message">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_reviewer_discussion_message"/>
+            </column>
+            <column name="review_round_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="message" type="TEXT"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_review_round_reviewer_discussion_message" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_MESSAGE_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_review_round_reviewer_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_id" baseTableName="jm_review_round_reviewer_discussion_message" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_MESSAGE_REVIEW_ROUND_ID" referencedColumnNames="id" referencedTableName="jm_review_round"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_review_round_reviewer_discussion_message" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_MESSAGE_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_reviewer_discussion_message" constraintName="FK_M_REVIEW_ROUND_REVIEWER_DISCUSSION_MESSAGE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_review_round_reviewer_discussion_message_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_reviewer_discussion_message_file"/>
+            </column>
+            <column name="message_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_reviewer_discussion_message_file" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_MESSAGE_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="file_type_id" baseTableName="jm_review_round_reviewer_discussion_message_file" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_MESSAGE_FILE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="message_id" baseTableName="jm_review_round_reviewer_discussion_message_file" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_DISCUSSION_MESSAGE_FILE_MESSAGE_ID" referencedColumnNames="id" referencedTableName="jm_review_round_reviewer_discussion_message"/>
+
+        <createTable tableName="jm_review_round_reviewer_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_review_round_reviewer_file"/>
+            </column>
+            <column name="review_round_reviewer_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="review_round_file_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_review_round_reviewer_file" constraintName="FK_JJM_REVIEW_ROUND_REVIEWER_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_file_id" baseTableName="jm_review_round_reviewer_file" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_FILE_REVIEW_ROUND_ID" referencedColumnNames="id" referencedTableName="jm_review_round_file"/>
+        <addForeignKeyConstraint baseColumnNames="review_round_reviewer_id" baseTableName="jm_review_round_reviewer_file" constraintName="FK_JM_REVIEW_ROUND_REVIEWER_FILE_REVIEW_ROUND_REVIEWER_ID" referencedColumnNames="id" referencedTableName="jm_review_round_reviewer"/>
+
+        <createTable tableName="jm_site_config">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_site_config"/>
+            </column>
+            <column name="value" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="jm_submission_contributor">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_submission_contributor"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_submission_contributor" constraintName="FK_JJM_SUBMISSION_CONTRIBUTOR_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_submission_contributor" constraintName="FK_JM_SUBMISSION_CONTRIBUTOR_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_submission_contributor" constraintName="FK_JM_SUBMISSION_CONTRIBUTOR_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+
+        <createTable tableName="jm_submission_discussion">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_submission_discussion"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="topic" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="TEXT"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_submission_discussion" constraintName="FK_JM_SUBMISSION_DISCUSSION_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_submission_discussion" constraintName="FK_JM_SUBMISSION_DISCUSSION_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_submission_discussion" constraintName="FK_JM_SUBMISSION_DISCUSSION_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_submission_discussion" constraintName="FK_JM_SUBMISSION_DISCUSSION_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_submission_discussion_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_submission_discussion_file"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_submission_discussion_file" constraintName="FK_JM_SUBMISSION_DISCUSSION_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_submission_discussion_file" constraintName="FK_JM_SUBMISSION_DISCUSSION_FILE_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="file_type" baseTableName="jm_submission_discussion_file" constraintName="FK_JM_SUBMISSION_DISCUSSION_FILE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+
+        <createTable tableName="jm_submission_discussion_user">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_submission_discussion_user"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_submission_discussion_user" constraintName="FK_JM_SUBMISSION_DISCUSSION_USER_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_submission_discussion_user" constraintName="FK_JM_SUBMISSION_DISCUSSION_USER_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_submission_discussion_user" constraintName="FK_JM_SUBMISSION_DISCUSSION_USER_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_submission_discussion_message">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_submission_discussion_message"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discussion_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="message" type="TEXT"/>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)"/>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="discussion_id" baseTableName="jm_submission_discussion_message" constraintName="FK_JM_SUBMISSION_DISCUSSION_MESSAGE_DISCUSSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_discussion"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_submission_discussion_message" constraintName="FK_JM_SUBMISSION_DISCUSSION_MESSAGE_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_submission_discussion_message" constraintName="FK_JM_SUBMISSION_DISCUSSION_MESSAGE_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jm_submission_discussion_message" constraintName="FK_JM_SUBMISSION_DISCUSSION_MESSAGE_USER_ID" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_submission_discussion_message" constraintName="FK_M_SUBMISSION_DISCUSSION_MESSAGE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+
+        <createTable tableName="jm_submission_discussion_message_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_submission_discussion_message_file"/>
+            </column>
+            <column name="message_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_submission_discussion_message_file" constraintName="FK_JM_SUBMISSION_DISCUSSION_MESSAGE_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="file_type_id" baseTableName="jm_submission_discussion_message_file" constraintName="FK_JM_SUBMISSION_DISCUSSION_MESSAGE_FILE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="message_id" baseTableName="jm_submission_discussion_message_file" constraintName="FK_JM_SUBMISSION_DISCUSSION_MESSAGE_FILE_MESSAGE_ID" referencedColumnNames="id" referencedTableName="jm_submission_discussion_message"/>
+
+        <createTable tableName="jm_submission_file">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jm_submission_file"/>
+            </column>
+            <column name="submission_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="journal_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_type" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file" type="VARCHAR(300)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_path" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_revised" type="BOOLEAN"/>
+            <column name="revised_file_id" type="BIGINT"/>
+            <column name="revised_at" type="DATETIME"/>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="created_by" baseTableName="jm_submission_file" constraintName="FK_JM_SUBMISSION_FILE_CREATED_BY" referencedColumnNames="id" referencedTableName="jm_user"/>
+        <addForeignKeyConstraint baseColumnNames="file_type" baseTableName="jm_submission_file" constraintName="FK_JM_SUBMISSION_FILE_FILE_TYPE_ID" referencedColumnNames="id" referencedTableName="jm_journal_file_type"/>
+        <addForeignKeyConstraint baseColumnNames="journal_id" baseTableName="jm_submission_file" constraintName="FK_JM_SUBMISSION_FILE_JOURNAL_ID" referencedColumnNames="id" referencedTableName="jm_journal"/>
+        <addForeignKeyConstraint baseColumnNames="submission_id" baseTableName="jm_submission_file" constraintName="FK_JM_SUBMISSION_FILE_SUBMISSION_ID" referencedColumnNames="id" referencedTableName="jm_submission_article"/>
+
+        <loadData
+            file="config/liquibase/data/language.csv"
+            separator=","
+            tableName="jm_language"
+            usePreparedStatements="true">
+        </loadData>
+
+        <loadData
+            file="config/liquibase/data/country.csv"
+            separator=";"
+            tableName="jm_country"
+            usePreparedStatements="true">
+        </loadData>
+
+        <loadData
+            file="config/liquibase/data/sub_file_formats.csv"
+            separator=";"
+            tableName="jm_submission_file_format"
+            usePreparedStatements="true">
+        </loadData>
+
+        <loadData
+            file="config/liquibase/data/administration_role.csv"
+            separator=";"
+            tableName="jm_role"
+            usePreparedStatements="true">
+        </loadData>
+
+        <loadData
+            file="config/liquibase/data/administration_role_permission.csv"
+            separator=";"
+            tableName="jm_role_permission"
+            usePreparedStatements="true">
+        </loadData>
+
+        <loadData
+            file="config/liquibase/data/user.csv"
+            separator=";"
+            tableName="jm_user"
+            usePreparedStatements="true">
+        </loadData>
+
+        <loadData
+            file="config/liquibase/data/administration_role_user.csv"
+            separator=";"
+            tableName="jm_user_role"
+            usePreparedStatements="true">
+        </loadData>
+
+        <loadData
+            file="config/liquibase/data/submission_article_file_types.csv"
+            separator=";"
+            tableName="jm_submission_article_file_type"
+            usePreparedStatements="true">
+        </loadData>
+
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,12 @@
+{
+  "button-permission": {
+    "ACCEPT_&_SEND_PRODUCTION": "قبول وإرسال الإنتاج",
+    "REQUEST_A_REVIEW": "طلب مراجعة",
+    "ACCEPT_SUBMISSION": "قبول التقديم",
+    "DECLINE_REQUEST_REVIEW": "رفض طلب المراجعة",
+    "ACCEPT_REVIEW_REQUEST_&_NEXT": "قبول طلب المراجعة والتالي",
+    "Participants": "مشاركون",
+    "ASSIGN": "تعيين",
+    "No_Participants_Found": "لم يتم العثور على أي مشاركين"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "sidemenu": {
+    "journal": {
+      "journal_setting": "إعداد المجلة",
+      "publishing_details": "تفاصيل النشر",
+      "journal_summary": "ملخص المجلة",
+      "guidelines": "القواعد الارشادية",
+      "category": "فئة"
+    },
+    "permission": {
+      "permission": "إذن"
+    },
+    "contributors": {
+      "contributors": "المساهمون",
+      "user": "مستخدم",
+      "group": "مجموعة",
+      "invites": "يدعو"
+    },
+    "workflow": "سير العمل",
+    "add_new": "اضف جديد"
+  }
+}

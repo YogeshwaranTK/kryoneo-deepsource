@@ -1,0 +1,16 @@
+{
+  "header": {
+    "profile": "Profile & Account",
+    "organization_setting":"Organization Settings",
+    "chat_support":"Chat & Support",
+    "signout":"SIGN OUT",
+    "manage_account":"MANAGE MY ACCOUNT",
+    "user_id":"USER ID",
+    "site_map":"Site Map",
+    "fqa":"FQA",
+    "contact_us":"Contact Us",
+    "journal_settings":"Journal Settings",
+    "user_management":"User Management",
+    "language":"Language"
+  }
+}

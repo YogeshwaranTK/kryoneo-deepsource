@@ -1,0 +1,67 @@
+{
+  "register": {
+    "title": "سجل",
+    "form": {
+      "organizationName": "اسم المنظمة",
+      "fullName": "الاسم الكامل",
+      "fullName_placeholder": "أدخل اسمك الكامل",
+      "fullName_required": "اسم مسؤول المنظمة مطلوب",
+
+      "emailId": "عنوان الايميل",
+      "emailId_placeholder": "أدخل عنوان البريد الإلكتروني الخاص بك",
+      "emailId_required": "تسجيل دخول المستخدم مطلوب",
+
+      "password": "كلمة المرور",
+      "password_placeholder": "ادخل رقمك السري",
+      "password_required": "كلمة المرور مطلوبة",
+
+      "confirmPassword": "تأكيد كلمة المرور",
+      "confirmPassword_placeholder": "أدخل تأكيد كلمة المرور الخاصة بك",
+      "confirmPassword_required": "تأكيد كلمة المرور مطلوب",
+
+      "addressOne": "العنوان سطر 1",
+      "addressOne_placeholder": "أدخل رقم الباب / رقم الشارع / العنوان",
+      "addressOne_required": "العنوان مطلوب",
+
+      "addressTwo": "سطر العنوان 2",
+      "addressTwo_placeholder": "أدخل تفاصيل العنوان الخاص بك",
+      "addressTwo_required": "مطلوب العنوان الثاني",
+
+      "addressThree": "سطر العنوان 3",
+      "addressThree_placeholder": "أدخل تفاصيل العنوان الخاص بك",
+
+      "country": "دولة",
+      "country_placeholder": "حدد الدولة",
+
+      "state": "ولاية",
+      "state_placeholder": "أدخل الولاية / المقاطعة الخاصة بك",
+      "state_required": "الدولة مطلوبة",
+
+      "phoneNumber": "رقم التليفون",
+      "phoneNumber_placeholder": "أدخل رقم هاتفك",
+      "phoneNumber_required": "رقم الهاتف المحمول مطلوب",
+
+      "select": "يختار",
+
+      "button": "سجل"
+    },
+    "messages": {
+      "alreadyHaveAccount": "هل لديك حساب",
+      "loginNow": "تسجيل الدخول الآن",
+      "validate": {
+        "login": {
+          "required": "اسم المستخدم الخاصة بك مطلوب.",
+          "minlength": "اسم المستخدم الخاصة بك مطلوب ليكون على الأقل 1 حرف.",
+          "maxlength": "اسم المستخدم الخاصة بك لا يمكن أن يكون أطول من 50 حرفا.",
+          "pattern": "Your username is invalid."
+        }
+      },
+      "success": "<strong>تم التسجيل!</strong> يرجى التحقق من بريدك الالكتروني للحصول على تأكيد.",
+      "error": {
+        "fail": "<strong>فشل في التسجيل!</strong> الرجاء إعادة المحاولة في وقت لاحق.",
+        "userexists": "<strong>اسم الدخول مسجل بالفعل!</strong> الرجاء اختيار واحد آخر.",
+        "emailexists": "<strong>البريد الالكتروني قيد الاستخدام بالفعل!</strong> الرجاء اختيار واحد آخر."
+      }
+    }
+  }
+}

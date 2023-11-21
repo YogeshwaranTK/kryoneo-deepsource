@@ -1,0 +1,22 @@
+{
+  "ADD_DISCUSSION_TITLE": {
+    "ADD_DISCUSSION": "إضافة مناقشة",
+    "Participants": "مشاركون",
+    "Select_at_least_one_participant": "اختر مشاركًا واحدًا على الأقل",
+    "Subject": "موضوع",
+    "Enter_Subject": "أدخل الموضوع",
+    "Subject_is_required": "الموضوع مطلوب",
+    "Message": "رسالة",
+    "Required_Description": "الوصف المطلوب",
+    "Discussion_Description": "وصف المناقشة",
+    "Select_File_Type": "حدد نوع الملف",
+    "Select_file_type": "حدد نوع الملف",
+    "Upload_File": "رفع ملف",
+    "Upload_files_not_found.": "لم يتم العثور على تحميل الملفات.",
+    "CANCEL": "يلغي",
+    "File_Name": "اسم الملف",
+    "File_Type": "نوع الملف",
+    "File_Format": "تنسيق الملف",
+    "Action": "فعل"
+  }
+}

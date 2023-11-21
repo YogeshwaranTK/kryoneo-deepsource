@@ -1,0 +1,47 @@
+{
+  "ReviewFlowName": {
+    "Round": "Round_1",
+    "Review": "Review"
+  },
+  "Reviewtitle": {
+    "+Add_Round": "+Add Round",
+    "Review_Files": "Review Files",
+    "UPLOAD_FILE": "UPLOAD FILE",
+    "File_Name": "File Name",
+    "File_Type": "File Type",
+    "File_Format": "File Format",
+    "Download": "Download",
+    "Action(s)": "Action(s)",
+    "Review_Files_is_Empty": "Review Files is Empty",
+    "Download_All": "Download All",
+    "Reviewer": "Reviewer",
+    "ADD_REVIEWER": "ADD REVIEWER",
+    "Production_Ready_Files_is_Empty": "Production Ready Files is Empty",
+    "Discussions": " Discussions",
+    "Discussion_Not_Yet_Started": "Discussion Not Yet Started",
+    "ADD_DISCUSSION": "ADD DISCUSSION",
+    "Cancel_reviewer": "Cancel reviewer",
+    "No_review_data_available.": "No review data available.",
+    "Reviewer_Name": "Reviewer Name",
+    "Type": "Type",
+    "Response_Due_Date": "Response Due Date",
+    "Status": "Status",
+    "Review_Details": "Review Details",
+    "Email_Reviewer": "Email Reviewer",
+    "Edit": "Edit",
+    "History": "History",
+    "Login_As": "Login As",
+    "Editorial_Notes": "Editorial Notes",
+    "Closed": "Closed",
+    "Re-Open": "Re-Open",
+    "Discussion_Description:": "Discussion Description:",
+    "Attachments": "Attachments",
+    "ADD_CHAT": "ADD CHAT",
+    "Request_Type :": "Request Type :",
+    "Editor_Comments :": "Editor Comments :",
+    "Editor_&_Author_Comments :": "Editor & Author Comments :",
+    "Reviewer_Recommendation :": "Reviewer Recommendation :",
+    "Reviewer_Files :": "Reviewer Files :"
+
+  }
+}

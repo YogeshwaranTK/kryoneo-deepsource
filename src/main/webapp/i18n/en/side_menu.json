@@ -1,0 +1,22 @@
+{
+  "sidemenu": {
+    "journal": {
+      "journal_setting": "Journal Setting",
+      "publishing_details": "Publishing Details",
+      "journal_summary": "Journal Summary",
+      "guidelines": "Guidelines",
+      "category": "Category"
+    },
+    "permission": {
+      "permission": "Permission"
+    },
+    "contributors": {
+      "contributors": "Contributors",
+      "user": "User",
+      "group": "Group",
+      "invites": "Invites"
+    },
+    "workflow": "workflow",
+    "add_new": "ADD NEW"
+  }
+}

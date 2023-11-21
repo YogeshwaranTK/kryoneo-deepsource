@@ -1,0 +1,81 @@
+{
+    "Submission_Create_Breadcrumb": {
+        "Journals": "المجلات",
+        "Home": "بيت",
+        "DFR":"درف",
+        "Create_Submission": "إنشاء تقديم جديد"
+    },
+    "Submission_Create_Basic_Details":{
+        "Article_Title":"عنوان المقال",
+        "Article_Title_notes":"(يجب أن يكون الحرف الأول من كل كلمة بالأحرف الكبيرة)",
+        "Enter_Article_Title":"أدخل عنوان المقال",
+        "Article_Title_Required":"عنوان المقالة هو حقل مطلوب",
+        "Sub_Title":"العنوان الفرعي",
+        "Enter_Sub_Title":"أدخل العنوان الفرعي للمقال",
+        "Article_keyword":"إضافة الكلمات الرئيسية/العلامات",
+        "Article_notes":"إذا كان أي ذات صلة",
+        "Enter_Article_keyword":"اكتب الكلمة الأساسية وأدخل",
+        "Submission_Language":"لغة التقديم",
+        "Submission_Language_notes":"اختر اللغة الأساسية",
+        "Select_language":"اختار اللغة",
+        "Abstract":"خلاصة",
+        "Abstract_Notes":"وصف قصير عن المقال",
+        "Enter_Abstract":"وصف مختصر / ملخص عن المقال",
+        "Abstract_Required":"الملخص هو حقل مطلوب",
+        "Article_Agree":"أنا أوافق على",
+        "Article_Terms":"شروط الاستخدام أ",
+        "And":" و ",
+        "Article_Policy":"سياسة الخصوصية",
+        "Agree_Terms":"يجب أن توافق على الشروط"
+    },
+    "Contribution_add":{
+        "Title":"إضافة مساهم",
+        "Prefix":"بادئة",
+        "Enter_Title":"أدخل البادئة",
+        "First_Name":"الاسم الأول",
+        "Enter_First_Name":"أدخل الاسم الأول",
+        "First_Name_Required":"الإسم الأول مطلوب",
+        "Surname":"اسم العائلة",
+        "Enter_Surname":"أدخل اللقب",
+        "Surname_Required":"اللقب مطلوب",
+        "Middle_Name":"الاسم الأوسط",
+        "Enter_Middle_Name":"أدخل الاسم الأوسط",
+        "Email":"عنوان الايميل",
+        "Enter_Email":"أدخل معرف البريد الإلكتروني",
+        "ORCID":"أوركيد",
+        "Enter_ORCID":"أدخل الأوركيد",
+        "Contributor_Role":"دور المساهم",
+        "Contributor_Role_Required":"حدد دور المساهم",
+        "Translator":"يترجم",
+        "Author":"مؤلف",
+        "Browse_List":"هل تريد تضمين هذا المساهم في قوائم التصفح؟",
+        "Affiliations":"الانتماءات",
+        "Enter_Affiliations":"أدخل الانتماءات",
+        "Add_Affiliation":"إضافة الانتماء",
+        "Primary_Contact":"اتصال رئيسي"
+    },
+    "Upload_files":{
+        "Select_File_Type":"حدد نوع الملف",
+        "Upload_Files":"تحميل الملفات",
+        "Article_Text_Required":"نص المقال مطلوب"
+    },
+    "Contribution":{
+        "Title":"المساهمين بالمقالات",
+        "Add_Contribution":"أضف مساهمة",
+        "Sample_Excel":"نموذج اكسل",
+        "Upload_Excel":"تحميل ملف اكسل",
+        "First_Name":"الاسم الأول",
+        "Surname":"اسم العائلة",
+        "Email":"عنوان الايميل",
+        "Contributor_Role":"دور المساهم",
+        "Primary_Contact":"اتصال رئيسي",
+        "Status":"حالة",
+        "Action":"أجراءات)"
+    },
+    "Workflow_Title":{
+        "Basic_details":"تفاصيل أساسية",
+        "Contribution":"مساهمة",
+        "Upload_File":"رفع ملف"
+    }
+
+}

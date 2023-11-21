@@ -1,0 +1,10 @@
+{
+    "journal_summary":{
+      "journal_title":"ملخص المجلة",
+      "journal_subtitle":"املأ تفاصيل الملخص أدناه",
+      "journal_cover_image":"صورة غلاف المجلة",
+      "journal_summary_placeholder":"أدخل ملخص المجلة",
+      "journal_summary_required":"ملخص المجلة مطلوب",
+      "journal_fillMandatory":"املأ الحقول الإلزامية المذكورة أدناه"
+    }
+}

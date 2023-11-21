@@ -1,0 +1,32 @@
+{
+  "publishing": {
+    "InvalidFormat1234-5678":"Invalid format. Use 1234-5678 format.",
+    "JournalTitleRequired":"Journal Title is Required",
+    "JournalTitleMust2Characters":"Journal Title must be min 2 characters",
+    "JournalTitleMust200Characters" : "Journal Title must be at most 200 characters",
+    "publishing_title": "Journal Setting - Publishing Details",
+    "sub_title": "Fill the Publishing Details below",
+    "keyPlaceholder": "Enter Key",
+    "keyRequired": "Key is required",
+    "MaximumLength5characters": "Maximum length should 5 characters",
+    "KeyOnlyAlphabets": "Key should be only alphabets",
+    "publisher_name": "Publisher Name",
+    "publisher_name_placeholder": "Enter Publisher Name",
+    "publisher_name_required": "Publisher name is required",
+    "online_issn": "Online ISSN",
+    "online_issn_placeholder": "Enter Online ISSN",
+    "online_issn_required": "Online ISSN is required",
+    "print_issn": "Print ISSN",
+    "print_issn_placeholder": "Enter Print ISSN",
+    "print_issn_required": "Print ISSN is required",
+    "journal_description": "Journal Description",
+    "journal_description_placeholder": "Enter journal Description",
+    "journal_description_required": "Journal Description is required",
+    "publisher_description": "Publisher Description",
+    "publisher_description_placeholder": "Enter Publisher Description",
+    "publisher_description_required": "Publisher Description is required",
+    "Editor_in_Chief": "Editor(s)-in-Chief",
+    "Editor_in_ChiefPlaceholder": "Enter the Editor(s)-in-Chief",
+    "Editor_in_ChiefRequired": "Editor(s)-in-Chief is required"
+  }
+}

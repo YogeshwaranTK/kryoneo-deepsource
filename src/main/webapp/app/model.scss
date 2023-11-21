@@ -1,0 +1,46 @@
+#Journal_delete,
+#create-group,
+#user-journal-create,
+#GroupDelete,
+#GroupUserCreate,
+#GroupUserDelete,
+#userManagementCreate,
+#userManagementDelete,
+#AddContributorModel,
+#AssignEditorialUsers,
+#CreateRoleManagement,
+#RoleUserCreate,
+#RequestSubmission,
+#AcceptRequestSubmission,
+#RejectRevisionRequestModel{
+  .modal-content {
+    .modal-footer {
+      justify-content: start;
+      border-top: 0;
+      padding: 22px 0 10px 0;
+    }
+    label {
+      color: #4a4a4a;
+      font-weight: 600;
+    }
+    .modal-header{
+      h5{
+        font-weight: 600;
+      }
+    }
+    .modal-footer {
+      button {
+        padding: 7px 7px;
+        font-size: 12px;
+        font-weight: bold;
+        min-width: 80px;
+        border-radius: 7px;
+        margin: 0 10px 0 0;
+      }
+    }
+    .delete-warning {
+      color: #4a4a4a;
+      font-size: 16px;
+    }
+  }
+}

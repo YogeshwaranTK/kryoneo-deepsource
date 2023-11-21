@@ -1,0 +1,67 @@
+{
+  "Authors_Details": {
+    "Authors": "المؤلفون",
+    "List_of_Authors_assigned_for_contribution": "قائمة المؤلفين المعينين للمساهمة",
+    "Author_Members": "الأعضاء المؤلفون",
+    "ADD_USER": "إضافة مستخدم",
+    "User_Name": "اسم المستخدم",
+    "Role_Type": "نوع الدور",
+    "Action": "فعل",
+    "Remove_User": "إزالة المستخدم",
+    "No_result_found.": "لم يتم العثور على نتائج."
+  },
+  "Reviewers_Details": {
+    "Reviewers": "المراجعين",
+    "List_of_Reviewers_assigned_for_contribution": "قائمة المراجعين المعينين للمساهمة",
+    "Reviewer_Members": "أعضاء المراجعين",
+    "ADD_USER": "إضافة مستخدم",
+    "User_Name": "اسم المستخدم",
+    "Role_Type": "نوع الدور",
+    "Action": "فعل",
+    "Remove_User": "إزالة المستخدم",
+    "No_result_found.": "لم يتم العثور على نتائج."
+  },
+  "Add_User_Details": {
+    "Add_User": "إضافة مستخدم",
+    "Search_User": "بحث المستخدم",
+    "SUBMIT": "يُقدِّم",
+    "CANCEL": "يلغي",
+    "+ Create_User": "+ إنشاء مستخدم"
+  },
+  "Editorial_Users_Details": {
+    "Editorial_Users": "مستخدمو التحرير",
+    "List_of_Editorial_Users_assigned_for_contribution": "قائمة المستخدمين التحريريين المعينين للمساهمة",
+    "Editorial_Members": "أعضاء التحرير",
+    "ADD_USER": "إضافة مستخدم",
+    "User_Name": "اسم المستخدم",
+    "Role_Type": "نوع الدور",
+    "Action": "فعل",
+    "Remove_User": "إزالة المستخدم",
+    "No_result_found.": "لم يتم العثور على نتائج."
+  },
+  "EDITORIAL_USERS": {
+    "ADD_EDITORIAL_USERS": "إضافة المستخدمين التحريريين",
+    "+ Create_User": "+ إنشاء مستخدم",
+    "Add_Users": "إضافة مستخدمين",
+    "Search_User": "بحث المستخدم",
+    "Select_Role": "حدد الدور",
+    "Create_New_Role": "إنشاء دور جديد",
+    "Enter_New_Role": "أدخل دور جديد",
+    "+ Create_New_Role": "+ إنشاء دور جديد",
+    "+ Select_Default_Roles": "+ حدد الأدوار الافتراضية",
+    "Submission": "استسلام",
+    "Review": "مراجعة",
+    "Copy_Editing": "تحرير النسخ",
+    "Production": "إنتاج"
+  },
+  "user_and_role": {
+    "Authors": "المؤلفون",
+    "Reviewers": "المراجعين",
+    "Editorial_Users": "مستخدمو التحرير"
+  },
+  "contributors_breadcrumb": {
+    "home": "بيت",
+    "journals": "المجلات",
+    "Users_&_Roles_Settings": "إعدادات المستخدمين والأدوار"
+  }
+}

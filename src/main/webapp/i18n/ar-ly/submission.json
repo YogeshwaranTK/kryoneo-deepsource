@@ -1,0 +1,25 @@
+{
+  "submissionArticle":{
+    "created": "إرسال التفاصيل الأساسية تم إنشاؤه بنجاح",
+    "updated": "تم تحديث مقال التقديم بنجاح",
+    "categoryUpdated": "تم تحديث الفئة بنجاح",
+    "fileUpdated": "تم تحديث الملف بنجاح",
+    "fileUploadSuccess": "تم رفع الملف بنجاح",
+    "authorUpdated": "تم تحديث المؤلف بنجاح",
+    "finalSubmissionDone": "تم التقديم النهائي بنجاح",
+    "draftFileOnlyAllowed": "يسمح فقط بملف المسودة",
+    "NoArticlesCreated": "لا توجد مقالات تم إنشاؤها بعد."
+  },
+  "submissionFlowName": {
+    "Submissions": "التقديمات",
+    "Review": "مراجعة",
+    "Copyediting": "التحرير",
+    "Production": "إنتاج"
+  },
+  "submissionList": {
+    "ArticleTitle": "عنوان المقال"
+  }
+}
+
+
+

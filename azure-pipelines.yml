@@ -1,0 +1,18 @@
+trigger: none
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  - group: dev
+  
+steps:
+- script: |
+    docker login $(acr-login-server) -u $(acr-name) -p $(acr-password)
+    npm install
+    npm run build
+    mvn package -DskipTests -Pdev,api-docs jib:dockerBuild
+    docker tag kjms $(acr-login-server)/kjms
+    docker push $(acr-login-server)/kjms:latest
+    docker logout $(acr-login-server)
+  displayName: 'Builing and Push Docker Image to ACR'

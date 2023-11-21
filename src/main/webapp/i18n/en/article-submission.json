@@ -1,0 +1,11 @@
+{
+  "article": {
+    "articlename": "Article Submission List",
+    "article_sub_title": "List of Articles submitted in our platform",
+    "view_details": "View Details",
+    "edit_details": "Edit Details",
+    "move_archive": "Move to Archive",
+    "journal_management": "Journal Management",
+    "home": "Home"
+  }
+}

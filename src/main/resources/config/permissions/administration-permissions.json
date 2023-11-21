@@ -1,0 +1,142 @@
+{
+  "ADMIN_SETTING": {
+    "en": {
+      "display_name": "Admin Setting",
+      "description": "This permission enable administration management",
+      "workflow_module": "JOURNAL"
+    }
+  },
+  "READ_ANY_JOURNAL": {
+    "en": {
+      "display_name": "Read Any Journal",
+      "description": "This permission enable users to read/view all the Journals",
+      "workflow_module": "JOURNAL"
+    }
+  },
+  "WRITE_ANY_JOURNAL": {
+    "en": {
+      "display_name": "Write Any Journal",
+      "description": "This permission enable users to create new Journal",
+      "workflow_module": "JOURNAL"
+    }
+  },
+  "DELETE_ANY_JOURNAL": {
+    "en": {
+      "display_name": "Delete Any Journal",
+      "description": "This permission enable users can delete any journal",
+      "workflow_module": "JOURNAL"
+    }
+  },
+  "EXPORT_ALL_JOURNAL": {
+    "en": {
+      "display_name": "Export All Journal in Excel & Pdf",
+      "description": "This permission enable users can able to export journals as excel & pdf",
+      "workflow_module": "JOURNAL"
+    }
+  },
+  "READ_ANY_JOURNAL_CONTRIBUTOR_GROUP": {
+    "en": {
+      "display_name": "Read Any Journal Group",
+      "description": "This Permission enable users to read any contributor group in the any journal.",
+      "workflow_module": "JOURNAL"
+    }
+  },
+  "WRITE_ANY_JOURNAL_CONTRIBUTOR_GROUP": {
+    "en": {
+      "display_name": "Write Any Journal Group",
+      "description": "This Permission enable users to write any contributor group in the any journal.",
+      "workflow_module": "JOURNAL"
+    }
+  },
+  "DELETE_ANY_JOURNAL_CONTRIBUTOR_GROUP": {
+    "en": {
+      "display_name": "Delete Any Journal Group",
+      "description": "This Permission enable users to delete any contributor group in the any journal.",
+      "workflow_module": "JOURNAL"
+    }
+  },
+  "ADD_USER_TO_JOURNAL_CONTRIBUTOR_GROUP": {
+    "en": {
+      "display_name": "Add User to Any Journal Group",
+      "description": "This Permission enable user to add user to Any Journal Group in Any Journal.",
+      "workflow_module": "JOURNAL"
+    }
+  },
+  "REMOVE_USER_TO_JOURNAL_CONTRIBUTOR_GROUP": {
+    "en": {
+      "display_name": "Remove User from Any Journal Group",
+      "description": "This Permission enable user to remove user to Any Journal Group in Any Journal.",
+      "workflow_module": "JOURNAL"
+    }
+  },
+  "READ_USERS": {
+    "en": {
+      "display_name": "Read Any User",
+      "description": "This Permission enable user to add user to our platform.",
+      "workflow_module": "USER"
+    }
+  },
+  "WRITE_USERS": {
+    "en": {
+      "display_name": "Write Any User",
+      "description": "This Permission enable user to write any user in our platform.",
+      "workflow_module": "USER"
+    }
+  },
+  "DELETE_USERS": {
+    "en": {
+      "display_name": "Delete Any User",
+      "description": "This Permission enable user to delete any user in our platform.",
+      "workflow_module": "USER"
+    }
+  },
+  "EXPORT_ALL_USERS": {
+    "en": {
+      "display_name": "Export All users in Excel & Pdf",
+      "description": "This Permission enable user to download All users data in PDF & Excel formats.",
+      "workflow_module": "USER"
+    }
+  },
+  "READ_ADMINISTRATION_ROLES": {
+    "en": {
+      "display_name": "Read Any Administration Role",
+      "description": "This Permission enable user to Read Any Administration level roles.",
+      "workflow_module": "ADMINISTRATION_ROLE"
+    }
+  },
+  "WRITE_ADMINISTRATION_ROLES": {
+    "en": {
+      "display_name": "Write Any Administration Role",
+      "description": "This Permission enable user to Write Any Administration role.",
+      "workflow_module": "ADMINISTRATION_ROLE"
+    }
+  },
+  "DELETE_ADMINISTRATION_ROLES": {
+    "en": {
+      "display_name": "Delete Any Administration Role",
+      "description": "This Permission enable user to Delete Any Administration role.",
+      "workflow_module": "ADMINISTRATION_ROLE"
+    }
+  },
+  "ADD_USER_TO_ADMINISTRATION_ROLE": {
+    "en": {
+      "display_name": "Add Any User to Any Administration Role",
+      "description": "This Permission enable user to Add any User to any Administration role.",
+      "workflow_module": "ADMINISTRATION_ROLE"
+    }
+  },
+  "REMOVE_USER_TO_ADMINISTRATION_ROLE": {
+    "en": {
+      "display_name": "Remove User from Any Administration Role",
+      "description": "This Permission enable user to remove any User from any Administration role.",
+      "workflow_module": "ADMINISTRATION_ROLE"
+    }
+  },
+  "EXPORT_ALL_ROLES": {
+    "en": {
+      "display_name": "Export all Administration Roles in Excel & Pdf",
+      "description": "This Permission Enable user to Download All Journal in PDF & Excel formats",
+      "workflow_module": "ADMINISTRATION_ROLE"
+    }
+  }
+}

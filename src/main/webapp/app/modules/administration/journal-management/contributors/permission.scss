@@ -1,0 +1,31 @@
+.permission_list {
+  .display_name {
+    color: #4A4A4A;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .info {
+    color: #9198B0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.form-check-input {
+  margin-top: 0 !important;
+  border-color: #9198B0;
+  background-color: #fff;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.custom-checkbox {
+  padding: 10px 0 0 0;
+
+  input {
+    margin: 0 10px 0 0;
+  }
+}

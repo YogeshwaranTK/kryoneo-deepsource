@@ -1,0 +1,22 @@
+{
+  "Submission_Title": {
+    "Submission_Details": "تفاصيل التقديم"
+  },
+  "Submission_Details_Title": {
+    "Submission_Details": "تفاصيل التقديم",
+    "Journal_Name": "اسم المجلة",
+    "Article_Name": "اسم المقال",
+    "Sub_Title": "العنوان الفرعي",
+    "Submission_Language": "لغة التقديم",
+    "Abstract": "خلاصة",
+    "View": "منظر",
+    "Category": "فئة",
+    "Keywords/Tags": "الكلمات الرئيسية/العلامات",
+    "Uploaded_Files": "الملفات التي يتم تحميلها",
+    "Download_All": "تحميل الكل",
+    "Contributors": "المساهمين",
+    "Authors:": "المؤلفون:",
+    "Translators:": "المترجمون:",
+    "CLOSE": "يغلق"
+  }
+}

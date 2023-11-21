@@ -1,0 +1,33 @@
+type Query {
+    journals(filter: JournalFilter, page: PageInput!, sortBy: JournalSortBy): JournalPageableResponse!
+}
+
+input JournalFilter {
+    searchByName: String
+    journalIds: [ID]
+}
+
+
+type Journal {
+    id: String
+    title: String!
+}
+type PageMeta {
+    totalRecord: Int
+}
+
+
+input PageInput {
+    page: Int!
+    size: Int!
+}
+
+enum JournalSortBy {
+    NAME_ASC,
+    NAME_DESC
+}
+
+type JournalPageableResponse {
+    meta: PageMeta!
+    data: [Journal!]!
+}

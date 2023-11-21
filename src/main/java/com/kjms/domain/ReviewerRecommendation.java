@@ -1,0 +1,6 @@
+package com.kjms.domain;
+
+public enum ReviewerRecommendation {
+
+    ACCEPT_SUBMISSION, REVISIONS_REQUIRED, RESUBMIT_FOR_REVIEW, RESUBMIT_ELSEWHERE, DECLINE_SUBMISSION, SEE_COMMENTS
+}

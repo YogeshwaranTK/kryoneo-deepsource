@@ -1,0 +1,19 @@
+{
+  "organization": {
+    "emailOtpResend": "OTP sent successfully {{ param }}",
+    "register": "<strong>Registration saved!</strong> Please check your {{ param }}@gmail.com for confirmation.",
+    "emailVerify": "Successfully registered {{ param }}",
+    "registered": "Organization Registered Successfully",
+    "countryNotFound": "Country Not Found",
+    "contactSupport": "Unknown Error ",
+    "emailAlreadyExists": "Email Already Registered",
+    "emailVerified": "Email Verified Successfully",
+    "emailNotFound": "Email Not Found",
+    "emailAlreadyVerified": "Email Already Verified",
+    "emailOtpNotFound": "Email OTP Not Found",
+    "emailExpiryTimeNotFound": "Email Expiry Time Not Found",
+    "otpExpired": "OTP Expired",
+    "wrongOTP": "Wrong OTP",
+    "emailOtpResendSuccess": "Otp Resend to email successfully"
+  }
+}

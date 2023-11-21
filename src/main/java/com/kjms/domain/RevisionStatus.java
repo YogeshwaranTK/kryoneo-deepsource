@@ -1,0 +1,12 @@
+package com.kjms.domain;
+
+public enum RevisionStatus {
+    PENDING,
+    AUTHOR_ACCEPTED,
+    DRAFT,
+    AUTHOR_REJECTED,
+    AUTHOR_SUBMITTED,
+    SUBMISSION_REVIEWER_ACCEPTED,
+    SUBMISSION_REVIEWER_REJECTED,
+    CANCELLED
+}

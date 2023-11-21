@@ -1,0 +1,29 @@
+{
+  "ADD_Reviewer_title": {
+    "ADD_Reviewer": "إضافة مراجع",
+    "Message": "رسالة",
+    "Required_Description": "الوصف المطلوب",
+    "Response_Due_Date": "تاريخ استحقاق الرد",
+    "Required_Response_DueDate": "تاريخ استحقاق الاستجابة المطلوبة",
+    "Review_Due_Date": "مراجعة تاريخ الاستحقاق",
+    "Required_Review_DueDate": "تاريخ استحقاق المراجعة المطلوبة",
+    "Review_Type": "نوع المراجعة",
+    "Required_Review_Type": "نوع المراجعة المطلوبة",
+    "Choose_the_File": "اختر الملف",
+    "+Upload_the_File": "+رفع الملف",
+    "Select_File_Type": "حدد نوع الملف",
+    "Select_file_type": "حدد نوع الملف",
+    "Upload_File": "رفع ملف",
+    "File_Name": "اسم الملف",
+    "File_Type": "نوع الملف",
+    "File_Format": "تنسيق الملف",
+    "Action": "فعل",
+    "Upload_files_not_found.": "لم يتم العثور على تحميل الملفات.",
+    "CANCEL": "يلغي",
+    "UPLOAD_FILE": "رفع ملف",
+    "ADD": "يضيف",
+    "Discussion_Description": "وصف المناقشة",
+    "Select_the_Reviewer": "حدد المراجع"
+
+  }
+}

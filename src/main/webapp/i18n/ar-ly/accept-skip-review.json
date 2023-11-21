@@ -1,0 +1,18 @@
+{
+  "ACCEPT_REVIEW_TITLE": {
+    "ACCEPT_&_SKIP_REVIEW": "قبول وتخطي المراجعة",
+    "Send_Email": "ارسل بريد الكتروني",
+    "Message": "رسالة",
+    "Discussion_Description": "وصف المناقشة",
+    "Choose_the_File": "اختر الملف",
+    "+Upload_the_File": "+رفع الملف",
+    "Select_File_Type": "حدد نوع الملف",
+    "Select_file_type": "حدد نوع الملف",
+    "Upload_File": "رفع ملف",
+    "Upload_your_file": "قم بتحميل الملف الخاص بك",
+    "Upload_files_not_found.": "لم يتم العثور على تحميل الملفات.",
+    "CANCEL": "يلغي",
+    "UPLOAD_FILE": "رفع ملف",
+    "ADD": "يضيف"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ADD_DISCUSSION_TITLE": {
+    "ADD_DISCUSSION": "ADD DISCUSSION",
+    "Participants": "Participants",
+    "Select_at_least_one_participant": "Select at least one participant",
+    "Subject": "Subject",
+    "Enter_Subject": "Enter Subject",
+    "Subject_is_required": "Subject is required",
+    "Message": "Message",
+    "Required_Description": "Required Description",
+    "Discussion_Description": "Discussion Description",
+    "Select_File_Type": "Select File Type",
+    "Select_file_type": "Select file type",
+    "Upload_File": "Upload File",
+    "Upload_files_not_found.": "Upload files not found.",
+    "CANCEL": "CANCEL",
+    "File_Name": "File Name",
+    "File_Type": "File Type",
+    "File_Format": "File Format",
+    "Action": "Action"
+  }
+}

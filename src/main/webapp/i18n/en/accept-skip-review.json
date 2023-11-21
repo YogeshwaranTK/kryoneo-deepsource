@@ -1,0 +1,18 @@
+{
+  "ACCEPT_REVIEW_TITLE": {
+    "ACCEPT_&_SKIP_REVIEW": "ACCEPT & SKIP REVIEW",
+    "Send_Email": "Send Email",
+    "Message": "Message",
+    "Discussion_Description": "Discussion Description",
+    "Choose_the_File": "Choose the File",
+    "+Upload_the_File": "+Upload the File",
+    "Select_File_Type": "Select File Type",
+    "Select_file_type": "Select file type",
+    "Upload_File": "Upload File",
+    "Upload_your_file": "Upload your file",
+    "Upload_files_not_found.": "Upload files not found.",
+    "CANCEL": "CANCEL",
+    "UPLOAD_FILE": "UPLOAD FILE",
+    "ADD": "ADD"
+  }
+}

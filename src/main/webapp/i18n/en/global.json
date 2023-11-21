@@ -1,0 +1,265 @@
+{
+  "global": {
+    "title": "Kjms",
+    "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
+    "menu": {
+      "home": "Home",
+      "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+      "entities": {
+        "main": "Entities",
+        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+      },
+      "account": {
+        "main": "Account",
+        "settings": "Settings",
+        "password": "Password",
+        "sessions": "Sessions",
+        "login": "Sign in",
+        "logout": "Sign out",
+        "register": "Register"
+      },
+      "admin": {
+        "main": "Administration",
+        "userManagement": "User management",
+        "tracker": "User tracker",
+        "metrics": "Metrics",
+        "health": "Health",
+        "configuration": "Configuration",
+        "logs": "Logs",
+        "apidocs": "API",
+        "database": "Database",
+        "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+      },
+      "language": "Language"
+    },
+    "form": {
+      "username.label": "Email Address",
+      "username.placeholder": "Enter your email address",
+      "currentpassword.label": "Current password",
+      "currentpassword.placeholder": "Current password",
+      "newpassword.label": "New password",
+      "newpassword.placeholder": "Enter your New password",
+      "confirmpassword.label": "New password confirmation",
+      "confirmpassword.placeholder": "Confirm the new password",
+      "email.label": "Email",
+      "email.placeholder": "Your email"
+    },
+    "messages": {
+      "info": {
+        "authenticated": {
+          "prefix": "If you want to ",
+          "link": "sign in",
+          "suffix": ", you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\")."
+        },
+        "register": {
+          "noaccount": "You don't have an account yet?",
+          "link": "Register a new account"
+        }
+      },
+      "error": {
+        "dontmatch": "The password and its confirmation do not match!"
+      },
+      "validate": {
+        "newpassword": {
+          "required": "Your password is required.",
+          "minlength": "Your password is required to be at least 4 characters.",
+          "maxlength": "Your password cannot be longer than 50 characters.",
+          "strength": "Password strength:"
+        },
+        "confirmpassword": {
+          "required": "Your confirmation password is required.",
+          "minlength": "Your confirmation password is required to be at least 4 characters.",
+          "maxlength": "Your confirmation password cannot be longer than 50 characters."
+        },
+        "email": {
+          "required": "Your email is required.",
+          "invalid": "Your email is invalid.",
+          "minlength": "Your email is required to be at least 5 characters.",
+          "maxlength": "Your email cannot be longer than 50 characters."
+        }
+      }
+    },
+    "field": {
+      "id": "ID"
+    },
+    "ribbon": {
+      "dev": "Development"
+    },
+    "item-count": "Showing {{first}} - {{second}} of {{total}} items.",
+    "experience": {
+      "experience": "Experience the User friendly Platform",
+      "experience_content": "KJMS is an excellent Journal Management platform. Experience the simple steps to sign in and access the authorization.",
+      "learn": "Learn More"
+    }
+  },
+  "entity": {
+    "action": {
+      "addblob": "Add blob",
+      "addimage": "Add image",
+      "back": "Back",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "edit": "Edit",
+      "open": "Open",
+      "save": "Save",
+      "view": "View",
+      "permissions": "Permissions",
+      "show": "Show {{otherEntity}}"
+    },
+    "detail": {
+      "field": "Field",
+      "value": "Value"
+    },
+    "delete": {
+      "title": "Confirm delete operation"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "minlength": "This field is required to be at least {{ min }} characters.",
+      "maxlength": "This field cannot be longer than {{ max }} characters.",
+      "min": "This field should be at least {{ min }}.",
+      "max": "This field cannot be more than {{ max }}.",
+      "minbytes": "This field should be at least {{ min }} bytes.",
+      "maxbytes": "This field cannot be more than {{ max }} bytes.",
+      "pattern": "This field should follow pattern for {{ pattern }}.",
+      "number": "This field should be a number.",
+      "datetimelocal": "This field should be a date and time.",
+      "patternLogin": "This field can only contain letters, digits and e-mail addresses."
+    },
+    "filters": {
+      "set": "Following filters are set",
+      "clear": "Clear filter",
+      "clearAll": "Clear all filters"
+    }
+  },
+  "error": {
+    "internalServerError": "Internal server error",
+    "server.not.reachable": "Server not reachable",
+    "url.not.found": "Not found",
+    "NotNull": "Field {{ fieldName }} cannot be empty!",
+    "Size": "Field {{ fieldName }} does not meet min/max size requirements!",
+    "userexists": "Login name already used!",
+    "emailexists": "Email is already in use!",
+    "idexists": "A new {{ entityName }} cannot already have an ID",
+    "idnull": "Invalid ID",
+    "idinvalid": "Invalid ID",
+    "idnotfound": "ID cannot be found",
+    "file": {
+      "could.not.extract": "Could not extract file",
+      "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
+    }
+  },
+  "filter":{
+    "filter": "Filter by All",
+    "active_list": "All Active List",
+    "article_queue": "My Article Queue List",
+    "unassigned_articles": "Unassigned Articles",
+    "archived_articles": "Archieved Articles"
+  },
+  "footer": "This is your footer",
+  "search": "Search",
+  "show_result": "Showing results for",
+  "items": "Items",
+  "entries": "entries",
+  "export_pdf": "Export as PDF",
+  "export_excel": "Export as Excel",
+  "save_update":"Save & Update",
+  "add_new": "ADD NEW",
+  "delete_details":"Delete Details",
+  "of":"of",
+  "to":"to",
+  "yes": "Yes",
+  "no": "No",
+  "reset":"RESET",
+  "File_Not_Found":"Upload files not found.",
+  "Suggestions":"Suggestions",
+  "notification": {
+    "Notification": "Notification",
+    "NoNotifyFound": "No Notification Found"
+  },
+  "buttons": {
+    "create": "CREATE",
+    "reset": "RESET",
+    "submit": "SUBMIT",
+    "cancel": "CANCEL",
+    "ResetPassword": "Reset Password",
+    "update": "UPDATE",
+    "no": "NO",
+    "yes": "YES",
+    "clearAllCamel": "Clear All",
+    "Save&Next": "SAVE & NEXT",
+    "createRole": "CREATE ROLE",
+    "confirm": "CONFIRM",
+    "AddUser": "ADD USER",
+    "Previous":"PREVIOUS",
+    "Save_Next":"SAVE AND NEXT",
+    "Add":"Add",
+    "Finish":"SAVE & FINISH",
+    "Save_Draft":"SAVE AS DRAFT"
+  },
+  "table": {
+    "UserName": "User Name",
+    "CreatedOn": "Created On",
+    "Status": "Status",
+    "Action": "Action(s)",
+    "NoResultsFound": "No Results Found",
+    "UpdatedOn": "Updated On",
+    "CreatedBy": "Created By"
+  },
+  "status": {
+    "Active": "Active",
+    "Inactive": "Inactive",
+    "CantEditUser":"Can't edit this user"
+  },
+  "dropdowns": {
+    "Edit": "Edit",
+    "Delete": "Delete"
+  },
+  "inputFields": {
+    "FullName": "Full Name",
+    "Email": "Email",
+    "Gender": "Gender",
+    "AddressLineOne": "Address Line 1",
+    "AddressLineTwo": "Address Line 2",
+    "Country": "Country",
+    "City": "City",
+    "State": "State",
+    "PinCode": "Pin Code",
+    "MobileNumber": "Mobile Number"
+  },
+  "PlaceHolders": {
+    "fullName": "Enter Your Full Name",
+    "Email": "Enter Email Address",
+    "Gender": "Select Gender",
+    "AddressLineOne": "Enter Address Line 1",
+    "AddressLineTwo": "Enter Address Line 2",
+    "Country": "Select Country",
+    "City": "Enter City",
+    "State": "Enter State/Province",
+    "PinCode": "Enter Pin Code",
+    "PostCode": "Select Code",
+    "MobileNumber": "Enter Mobile Number",
+    "Roles": "Select Roles",
+    "SelectJournal": "Select Journal",
+    "SelectJournalGroup": "Select Journal group",
+    "EnterYourORCID": "Enter Your ORCID",
+    "SearchUser": "Search User"
+  },
+  "inputValidations": {
+    "fullNameRequired": "Full Name is required",
+    "emailRequired": "Email Address is required",
+    "emailInvalid": "Invalid Email Address",
+    "MaxLen320": "Maximum length should be 320 characters",
+    "MobileNumberRequired": "Mobile Number is required",
+    "allowedOnlyNumbers": "Allowed only numbers",
+    "UserAlreadyAdded": "User already added",
+    "DateFormatRequired" : "Date format is required"
+  },
+  "Beadcrumb": {
+    "Home": "Home",
+    "Journals": "Journals",
+    "DRF": "DRF",
+    "Site_Settings": "Site Settings"
+
+  }
+}

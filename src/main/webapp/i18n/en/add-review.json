@@ -1,0 +1,29 @@
+{
+  "ADD_Reviewer_title": {
+    "ADD_Reviewer": "ADD Reviewer",
+    "Message": "Message",
+    "Required_Description": "Required Description",
+    "Response_Due_Date": "Response Due Date",
+    "Required_Response_DueDate": "Required Response DueDate",
+    "Review_Due_Date": "Review Due Date",
+    "Required_Review_DueDate": "Required Review DueDate",
+    "Review_Type": "Review Type",
+    "Required_Review_Type": "Required Review Type",
+    "Choose_the_File": "Choose the File",
+    "+Upload_the_File": "+Upload the File",
+    "Select_File_Type": "Select File Type",
+    "Select_file_type": "Select file type",
+    "Upload_File": "Upload File",
+    "File_Name": "File Name",
+    "File_Type": "File Type",
+    "File_Format": "File Format",
+    "Action": "Action",
+    "Upload_files_not_found.": "Upload files not found.",
+    "CANCEL": "CANCEL",
+    "UPLOAD_FILE": "UPLOAD FILE",
+    "ADD": "ADD",
+    "Discussion_Description": "Discussion Description",
+    "Select_the_Reviewer": "Select the Reviewer"
+
+  }
+}

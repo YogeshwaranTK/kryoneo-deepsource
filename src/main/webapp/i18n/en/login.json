@@ -1,0 +1,25 @@
+{
+  "login": {
+    "title": "Login",
+    "form": {
+      "password": "Password",
+      "password.placeholder": "Your password",
+      "rememberMe": "Remember Me",
+      "button": "Sign in",
+      "username_validation": "Username cannot be empty!",
+      "password_validation": "Password cannot be empty!"
+    },
+    "messages": {
+      "error": {
+        "authentication": "<strong>Failed to sign in!</strong> Please check your credentials and try again."
+      }
+    },
+    "password": {
+      "forgot": "Forgot Password?"
+    },
+    "register": {
+      "account": "Don't have an account?",
+      "create": "Register Now"
+    }
+  }
+}

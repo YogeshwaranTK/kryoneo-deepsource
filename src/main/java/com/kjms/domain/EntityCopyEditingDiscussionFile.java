@@ -1,0 +1,90 @@
+package com.kjms.domain;
+
+import javax.persistence.*;
+import java.time.Instant;
+
+@Entity
+@Table(name = "jm_copy_editing_discussion_file")
+public class EntityCopyEditingDiscussionFile {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false, unique = true)
+    private Long id;
+    // TODO: 13-Nov-23 @varghesh (fk missing in name)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "discussion_id", foreignKey = @ForeignKey(name = "jm_copy_editing_discussion_file_discussion_id"),nullable = false)
+    private EntityCopyEditingDiscussion copyEditingDiscussion;
+
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "file_type_id", foreignKey = @ForeignKey(name = "fk_jm_copy_editing_discussion_file_file_type_id"),nullable = false)
+    private EntityJournalFileType journalFileType;
+
+    @Column(name = "file", nullable = false, length = 300)
+    private String file;
+
+    @Column(name = "file_path", nullable = false, length = 500)
+    private String filePath;
+
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private Instant createdAt;
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "created_by", foreignKey = @ForeignKey(name = "fk_jm_copy_editing_discussion_file_created_by"), updatable = false, nullable = false)
+    private EntityUser createdBy;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public EntityCopyEditingDiscussion getCopyEditingDiscussion() {
+        return copyEditingDiscussion;
+    }
+
+    public void setCopyEditingDiscussion(EntityCopyEditingDiscussion copyEditingDiscussion) {
+        this.copyEditingDiscussion = copyEditingDiscussion;
+    }
+
+    public EntityJournalFileType getJournalFileType() {
+        return journalFileType;
+    }
+
+    public void setJournalFileType(EntityJournalFileType journalFileType) {
+        this.journalFileType = journalFileType;
+    }
+
+    public String getFile() {
+        return file;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
+
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Instant createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public EntityUser getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(EntityUser createdBy) {
+        this.createdBy = createdBy;
+    }
+}

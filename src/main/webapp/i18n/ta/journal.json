@@ -1,0 +1,24 @@
+{
+  "journal": {
+    "created": "{{ param }} Journal Created SuccessFully",
+    "maxFiveAlphaCharacters": "this is test",
+    "deleted": "{{ param }} Journal Created SuccessFully",
+    "title": "இதழ்கள்",
+    "sub_title": "எங்கள் தளத்தில் உருவாக்கப்பட்ட பத்திரிகைகளின் பட்டியல்",
+    "export_pdf": "PDF ஆக ஏற்றுமதி செய்யவும்",
+    "export_excel": "Excel ஆக ஏற்றுமதி செய்யவும்",
+    "create_new": "புதிதாக உருவாக்கு",
+    "S_no": "வரிசை எண்",
+    "journal_name": "பத்திரிகை பெயர்",
+    "key": "முக்கிய",
+    "type": "வகை",
+    "createdate": "உருவாக்கப்பட்ட தேதி",
+    "actions": "செயல்கள்",
+    "status": "நிலை",
+    "journalEmptyWarning": "இதுவரை பத்திரிகைகள் எதுவும் உருவாக்கப்படவில்லை."
+  },
+  "journal_breadcrumb": {
+    "journals": "இதழ்கள்",
+    "home": "வீடு"
+  }
+}

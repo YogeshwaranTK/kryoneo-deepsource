@@ -1,0 +1,96 @@
+.category-card {
+  padding: 5px 5px 5px 5px !important;
+  margin-bottom: 25px !important;
+
+
+  & > div{
+    max-height:370px;
+    overflow: auto;
+
+    ul {
+      li{
+        label{
+          line-height:32px
+        }
+
+      }
+    }
+  }
+}
+
+.parent-class {
+  .label {
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+  }
+}
+
+.child-class {
+  margin-left: 20px;
+  .label {
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+  }
+}
+
+.level-1 {
+  .label {
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+  }
+}
+
+.level-2 {
+  margin-left: 20px;
+  .label {
+    color: #4a4a4a;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+  }
+}
+
+.level-3 {
+  margin-left: 20px;
+  .label {
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+  }
+}
+
+.level-4 {
+  margin-left: 20px;
+  .label {
+    color: #4a4a4a;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px;
+  }
+}
+
+
+.check{
+  width: 30px;
+  height: 16px;
+  cursor: pointer;
+}
+
+
+.list-style {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.root-parent {
+  background-color: lightblue;
+  font-weight: 800;
+}

@@ -1,0 +1,25 @@
+package com.kjms.security;
+
+
+public final class JournalPermissionConstant {
+    private JournalPermissionConstant() {
+    }
+
+    public static final String CREATE_EDIT_SUBMIT_OWN_SUBMISSION = "CREATE_EDIT_SUBMIT_OWN_SUBMISSION";
+    public static final String VIEW_ANY_SUBMISSION = "VIEW_ANY_SUBMISSION";
+    public static final String REQUEST_FOR_REVISION_FOR_ANY_SUBMITTED_PAPER = "REQUEST_FOR_REVISION_FOR_ANY_SUBMITTED_PAPER";
+    public static final String ACCEPT_REVISION_REQUEST_FOR_OWN_SUBMITTED_PAPER = "ACCEPT_REVISION_REQUEST_FOR_OWN_SUBMITTED_PAPER";
+    public static final String REJECT_REVISION_REQUEST_FOR_OWN_SUBMITTED_PAPER = "REJECT_REVISION_REQUEST_FOR_OWN_SUBMITTED_PAPER";
+    public static final String ACCEPT_REVISION_FOR_ANY_SUBMITTED_PAPER = "ACCEPT_REVISION_FOR_ANY_SUBMITTED_PAPER";
+    public static final String REJECT_REVISION_FOR_ANY_SUBMITTED_PAPER = "REJECT_REVISION_FOR_ANY_SUBMITTED_PAPER";
+    public static final String ACCEPT_ANY_SUBMISSION = "ACCEPT_ANY_SUBMISSION";
+    public static final String REJECT_ANY_SUBMISSION = "REJECT_ANY_SUBMISSION";
+    public static final String ASSIGN_SUBMISSION_TO_REVIEWER = "ASSIGN_SUBMISSION_TO_REVIEWER";
+    public static final String PEER_REVIEW_SUBMISSION = "PEER_REVIEW_SUBMISSION";
+    public static final String MOVE_TO_PEER_REVIEW = "MOVE_TO_PEER_REVIEW";
+    public static final String VIEW_ALL_PEER_REVIEW = "VIEW_ALL_PEER_REVIEW";
+    public static final String CANCEL_ANY_PEER_REVIEW = "CANCEL_ANY_PEER_REVIEW";
+
+
+
+}

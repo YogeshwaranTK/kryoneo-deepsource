@@ -1,0 +1,76 @@
+{
+  "userManagement": {
+
+    "home": {
+      "title": "பயனர்கள்",
+      "refreshListLabel": "Refresh list",
+      "createLabel": "புதிய பயனரை உருவாக்கு",
+      "createOrEditLabel": "உருவாக்கு (அ) மாற்று பயனர்"
+    },
+    "created": "புதிய பயனர் பெயரயுடன் {{ param }} உருவாக்கப்பட்டது",
+    "updated": "பயனர் பெயரயுடன் {{ param }} மாற்றப்பட்டது",
+    "deleted": "பயனர் பெயரயுடன் {{ param }} நீக்கப்பட்டது",
+    "delete": {
+      "question": "பயனரை நீக்க உறுதி செய் ? - {{ login }}?"
+    },
+    "detail": {
+      "title": "பயனர்"
+    },
+    "login": "உள் நுழை",
+    "firstName": "முதற்பெயர்",
+    "lastName": "குடும்பப்பெயர்",
+    "email": "மின்னஞ்சல்",
+    "activated": "செயல்ப்படுத்து",
+    "deactivated": "செயலிழக்க",
+    "profiles": "சுயவிவரம்",
+    "langKey": "மொழி",
+    "createdBy": "உருவாக்கியர்",
+    "createdDate": "உருவாக்கிய தேதி",
+    "lastModifiedBy": "மாற்றியவர்",
+    "lastModifiedDate": "மாற்றிய தேதி"
+  },
+  "user": {
+    "forgotPassEmailOtpSent": "OTP வெற்றிகரமாக மின்னஞ்சலுக்கு அனுப்பப்பட்டது",
+    "userNotFound": "பயனர் கிடைக்கவில்லை",
+    "forgotPassEmailOtpVerified": "மின்னஞ்சல் ஓடிபி சரிபார்க்கப்பட்டது",
+    "emailOtpNotFound": "மின்னஞ்சல் OTP கிடைக்கவில்லை",
+    "emailExpiryTimeNotFound": "மின்னஞ்சல் காலாவதி நேரம் கிடைக்கவில்லை",
+    "otpExpired": "OTP காலாவதியானது",
+    "wrongOTP": "தவறான OTP",
+    "passwordChanged": "கடவுச்சொல் வெற்றிகரமாக மாற்றப்பட்டது",
+    "wrongVerifyKey": "சரிபார்ப்பு விசை தவறானது"
+  },
+  "userManagementSideBar": {
+    "UserManagement" : "பயனர் மேலாண்மை",
+    "Users": "பயனர்கள்",
+    "Roles": "பாத்திரங்கள்",
+    "DeveloperSettings": "டெவலப்பர் அமைப்புகள்",
+    "GeneralSetting": "பொது அமைப்பு",
+    "EmailSetting": "மின்னஞ்சல் அமைப்பு",
+    "StorageSetting": "சேமிப்பக அமைப்பு"
+  },
+  "userManagementBreadcrumb": {
+    "Home": "வீடு",
+    "Manage": "நிர்வகிக்கவும்"
+  },
+  "userManagementUsers": {
+    "ListOfUsersRegisteredPlatform": "எங்கள் தளத்தில் பதிவுசெய்யப்பட்ட பயனர்களின் பட்டியல்",
+    "DeleteUser": "பயனரை நீக்கு",
+    "ConfirmDeleteDes": "பயனரை நிச்சயமாக நீக்க விரும்புகிறீர்களா?",
+    "ReasonDeleteUser": "பயனரை நீக்குவதற்கான காரணம்",
+    "EnterReasonPH": "உங்கள் காரணத்தை உள்ளிடவும்",
+    "ReasonRequired": "காரணம் தேவை"
+  },
+  "userManagementCreateUser": {
+    "CreateUser": "பயனரை உருவாக்கவும்",
+    "UpdateUser": "பயனரைப் புதுப்பிக்கவும்",
+    "FillMandatoryDescription": "கீழே குறிப்பிடப்பட்டுள்ள கட்டாய புலங்களை நிரப்பவும்",
+    "AccessOrgAdminRadio": "நிறுவன நிர்வாகத்திற்கான அணுகலை வழங்க விரும்புகிறீர்களா?",
+    "AccessJournalAdminRadio": "பத்திரிகை பங்களிப்பாளர்கள் குழுவிற்கு அணுகலை வழங்க விரும்புகிறீர்களா?",
+    "Journal": "இதழ்",
+    "JournalGroup": "பத்திரிகை குழு",
+    "DoHaveORCID": "பயனருக்கான ORCID உங்களிடம் உள்ளதா?",
+    "CanAccessJournalAndGroups": "பயனர் ஜர்னல்கள் மற்றும் ஜர்னல்ஸ் குழுக்களை அணுகலாம்."
+
+  }
+}

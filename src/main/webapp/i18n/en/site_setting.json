@@ -1,0 +1,48 @@
+{
+  "Journal_Summary": {
+    "Journal_title": "Journal Summary",
+    "Journal_subtitle": "Fill the Summary Details below",
+    "Journal_Cover_Image": "Journal Cover Image",
+    "File_required": "File required",
+    "Journal_Summary": "journal Summary",
+    "Enter_Journal_Summary": "Enter Journal Summary",
+    "Journal_summary_is_required": "Journal summary is required"
+  },
+  "Journal_Details": {
+    "Journal_title": "Journal Details",
+    "Journal_subtitle": "Fill the Publishing Details below",
+    "Online_ISSN": "Online ISSN",
+    "Enter_Online_ISSN": "Enter Online ISSN",
+    "Online_ISSN_is_required": "Online ISSN is required",
+    "Print_ISSN": "Print ISSN",
+    "Enter_Print_ISSN": "Enter Print ISSN",
+    "Print_ISSN_is_required": "Print ISSN is required",
+    "Editor(s)-in-Chief": "Editor(s)-in-Chief",
+    "Enter_Editor(s)-in-Chief": "Enter Editor(s)-in-Chief",
+    "Journal_Description": "Journal_Description",
+    "Enter_Journal_Description": "Journal_Description"
+  },
+  "Guidelines": {
+    "Journal_title": "Guidelines",
+    "Journal_subtitle": "Guidelines to follow",
+    "Article_File_Type": "Article File Type",
+    "Select_or_Create_file_type": "Select or Create file type",
+    "Select_at_least_one_file_type": "Select at least one file type",
+    "Article_Submission_Format": "Article Submission Format",
+    "Select_file_format": "Select file format",
+    "Select_at_least_one_format": "Select at least one format",
+    "Add_category": "Add category",
+    "Select_or_Create_category": "Select or Create category",
+    "Article_Submission_Language": "Article Submission Language",
+    "Select_Language": "Select Language",
+    "Select_at_least_one_language": "Select at least one language",
+    "Article_Guidelines": "Article Guidelines",
+    "Enter_your_Article_Guidelines": "Enter_your_Article_Guidelines",
+    "Article_Guidelines_is_required": "Article Guidelines is required"
+  },
+  "site-setting-management": {
+    "Journal_Summary": "Journal Summary",
+    "Journal_Details": "Journal Details",
+    "Guidelines": "Guidelines"
+  }
+}

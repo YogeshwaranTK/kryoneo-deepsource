@@ -1,0 +1,139 @@
+.logo_header {
+  text-align: left;
+  padding-top: 19px;
+  padding-left: 4%;
+  img{
+    width: 180px;
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+.login {
+  width: 60%;
+}
+.register{
+  width: 80%;
+}
+.card_login {
+  box-shadow: 0px 2px 8px 4px rgba(0, 0, 0, 0.1);
+  margin: 33px auto;
+  border: none;
+  #login-title {
+    font-size: 34px;
+    font-weight: 600;
+    color: #323232;
+  }
+  .text-end_rememberMe {
+    .form-check {
+      input {
+        border-color: #d9d9d9 !important;
+      }
+      float: right;
+      label {
+        font-size: var(--default_font_size);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .forgot_pass_class {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: var(--default_font_size);
+    text-decoration: none;
+  }
+  .forgot_pass_class:hover {
+    text-decoration: underline;
+  }
+  .text-end_rememberMe {
+    color: var(--primary-color);
+  }
+  .new_register {
+    font-weight: 400;
+  }
+
+  .register_img {
+    padding-left: 44px;
+    padding-right: 52px;
+    img {
+      width: 70%;
+      padding-top: 20px;
+    }
+    h4 {
+      font-size: 16px;
+      font-weight: 700;
+      padding-top: 23px;
+    }
+    p {
+      color: #9198b0;
+    }
+    a {
+      color: var(--primary-color);
+      text-decoration: initial;
+    }
+    a:hover {
+      text-decoration: underline !important;
+    }
+  }
+
+  .col-7.pe-5 {
+    padding-left: 50px;
+    padding-top: 28px;
+  }
+}
+
+.dont_have_acc {
+  span {
+    font-size: var(--default_font_size);
+    font-weight: 500;
+  }
+  a {
+    font-size: var(--default_font_size);
+    padding-left: 2px;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.card_login {
+  p,
+  a {
+    font-size: var(--default_font_size);
+  }
+}
+
+.loginError{
+  font-size: 13px !important;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.toggle-password-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.rememberMe-label{
+  font-size: var(--default_font_size);
+  font-weight: 600;
+  padding: 4px;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+
+

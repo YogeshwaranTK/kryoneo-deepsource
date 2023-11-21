@@ -1,0 +1,22 @@
+{
+  "submissionArticle":{
+    "created": "Submission basic detail Created successfully",
+    "updated": "Submission Article Updated successfully",
+    "categoryUpdated": "Category updated successfully",
+    "fileUpdated": "File Updated successfully",
+    "fileUploadSuccess": "File Uploaded successfully",
+    "authorUpdated": "Author Updated successfully",
+    "finalSubmissionDone": "Final submission submitted successfully",
+    "draftFileOnlyAllowed": "Draft File only allowed",
+    "NoArticlesCreated": "There are no articles created yet."
+  },
+  "submissionFlowName": {
+    "Submissions": "Submissions",
+    "Review": "Review",
+    "Copyediting": "Copyediting",
+    "Production": "Production"
+  },
+  "submissionList": {
+    "ArticleTitle": "Article Title"
+  }
+}

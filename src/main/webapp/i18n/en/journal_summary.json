@@ -1,0 +1,10 @@
+{
+    "journal_summary":{
+        "journal_title":"Journal Summary",
+        "journal_subtitle":"Fill the Summary Details below",
+        "journal_cover_image":"Journal Cover Image ",
+        "journal_summary_placeholder":"Enter Journal Summary",
+        "journal_summary_required":"Journal summary is required",
+        "journal_fillMandatory":"Fill the mandatory fields mentioned below"
+    }
+}

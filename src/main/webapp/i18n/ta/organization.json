@@ -1,0 +1,19 @@
+{
+  "organization_tamil": {
+    "emailOtpResend": "OTP வெற்றிகரமாக அனுப்பப்பட்டது {{ param }}",
+    "register": "<strong>பதிவு சேமிக்கப்பட்டது!</strong> உறுதிப்படுத்த உங்கள் {{ param }}@gmail.com ஐப் பார்க்கவும்.",
+    "emailVerify": "வெற்றிகரமாகப் பதிவுசெய்யப்பட்டது {{ param }}",
+    "registered": "அமைப்பு வெற்றிகரமாக பதிவு செய்யப்பட்டது",
+    "countryNotFound": "நாடு கிடைக்கவில்லை",
+    "contactSupport": "ஆதரவைத் தொடர்பு கொள்ளவும்",
+    "emailAlreadyExists": "மின்னஞ்சல் ஏற்கனவே பதிவு செய்யப்பட்டுள்ளது",
+    "emailVerified": "மின்னஞ்சல் ஏற்கனவே பதிவு செய்யப்பட்டுள்ளது",
+    "emailNotFound": "மின்னஞ்சல் கிடைக்கவில்லை",
+    "emailAlreadyVerified": "மின்னஞ்சல் ஏற்கனவே சரிபார்க்கப்பட்டது",
+    "emailOtpNotFound": "மின்னஞ்சல் OTP கிடைக்கவில்லை",
+    "emailExpiryTimeNotFound": "மின்னஞ்சல் காலாவதி நேரம் கிடைக்கவில்லை",
+    "otpExpired": "OTP காலாவதியானது",
+    "wrongOTP": "தவறான OTP",
+    "emailOtpResendSuccess": "Otp மின்னஞ்சலுக்கு மீண்டும் அனுப்பவும்"
+  }
+}

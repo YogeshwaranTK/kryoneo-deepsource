@@ -1,0 +1,132 @@
+{
+  "userManagement": {
+    "home": {
+      "title": "المستخدمين",
+      "createLabel": "إنشاء مستخدم جديد",
+      "createOrEditLabel": "إنشاء أو تعديل مستخدم"
+    },
+    "created": "يتم إنشاء مستخدم جديد مع معرف {{ param }}",
+    "updated": "يتم تحديث المستخدم مع معرف{{ param }}",
+    "deleted": "تم حذف المستخدم مع معرف{{ param }}",
+    "delete": {
+      "question": "هل أنت متأكد أنك تريد حذف المستخدم {{ login }}?"
+    },
+    "detail": {
+      "title": "مستخدم"
+    },
+    "login": "تسجيل الدخول",
+    "firstName": "الاسم الاول",
+    "lastName": "اللقب",
+    "email": "البريد الإلكتروني",
+    "activated": "مفعل",
+    "deactivated": "غير مفعل",
+    "profiles": "الملفات الشخصية",
+    "langKey": "لغة",
+    "createdBy": "تم إنشاؤها بواسطة",
+    "createdDate": "تاريخ الإنشاء",
+    "lastModifiedBy": "عدل من قبل",
+    "lastModifiedDate": "تاريخ التعديل"
+  },
+  "user": {
+    "forgotPassEmailOtpSent": "تم إرسال OTP إلى البريد الإلكتروني بنجاح",
+    "userNotFound": "لم يتم العثور على المستخدم",
+    "forgotPassEmailOtpVerified": "التحقق من البريد الإلكتروني otp",
+    "emailOtpNotFound": "البريد الإلكتروني OTP غير موجود",
+    "emailExpiryTimeNotFound": "لم يتم العثور على وقت انتهاء صلاحية البريد الإلكتروني",
+    "otpExpired": "انتهت صلاحية OTP",
+    "wrongOTP": "OTP خاطئ",
+    "passwordChanged": "تم تغيير الرقم السري بنجاح",
+    "wrongVerifyKey": "مفتاح تحقق خاطئ"
+  },
+  "userManagementSideBar": {
+    "UserManagement" : "إدارةالمستخدم",
+    "administrators": "المسؤولين",
+    "Users": "المستخدمين",
+    "Roles": "الأدوار",
+    "DeveloperSettings": "إعدادات المطور",
+    "GeneralSetting": "الإعداد العام",
+    "EmailSetting": "إعداد البريد الإلكتروني",
+    "StorageSetting": "إعداد التخزين"
+  },
+  "userManagementBreadcrumb": {
+    "Home": "بيت",
+    "Manage": "يدير",
+    "EmailSettings": "إعدادات البريد الإلكتروني",
+    "GeneralSetting" : "الإعداد العام",
+    "StorageSetting" : "إعداد التخزين"
+
+  },
+  "userManagementUsers": {
+    "ListOfUsersRegisteredPlatform": "قائمة المستخدمين المسجلين في منصتنا",
+    "DeleteUser": "مسح المستخدم",
+    "ConfirmDeleteDes": "هل أنت متأكد أنك تريد حذف المستخدم؟",
+    "ReasonDeleteUser": "سبب حذف المستخدم",
+    "EnterReasonPH": "أدخل السبب الخاص بك",
+    "ReasonRequired": "السبب مطلوب"
+  },
+  "userManagementCreateUser": {
+    "CreateUser": "إنشاء مستخدم",
+    "UpdateUser": "تحديث المستخدم",
+    "FillMandatoryDescription": "املأ الحقول الإلزامية المذكورة أدناه",
+    "AccessOrgAdminRadio": "هل تريد منح حق الوصول إلى إدارة المنظمة؟",
+    "AccessJournalAdminRadio": "هل تريد منح حق الوصول إلى مجموعة المساهمين في المجلات؟",
+    "Journal": "مجلة",
+    "JournalGroup": "مجموعة المجلة",
+    "DoHaveORCID": "هل لديك ORCID للمستخدم؟",
+    "CanAccessJournalAndGroups": "يمكن للمستخدم الوصول إلى المجلات ومجموعات المجلات."
+  },
+  "roleManagement": {
+    "roleCreatedAccessSiteProject":"قائمة الأدوار التي تم إنشاؤها للوصول إلى الموقع والمشروع",
+    "RoleName":"اسم الدور",
+    "deleteRole": "حذف الدور",
+    "youWantToDelete": "هل أنت متأكد أنك تريد حذف الدور؟",
+    "ReasonDelete": "سبب الحذف",
+    "ReasonDeletePlaceholder": "أدخل سبب الحذف",
+    "ReasonDeleteRequired": "حقل السبب مطلوب",
+    "RoleRequired": "اسم الدور مطلوب",
+    "AddRole": "أضف دور",
+    "EnterRoleName": "أدخل اسم الدور",
+    "ListUsersAssignedRole": "قائمة المستخدمين المعينين لهذا الدور.",
+    "AddUser": "إضافة مستخدم"
+  },
+  "generalSettings": {
+    "GeneralSettings": "الاعدادات العامة",
+    "SubGeneralSettings": "الإعدادات العامة الفرعية",
+    "DateFormat": "صيغة التاريخ",
+    "DateFormatPlaceHolder": "حدد تنسيق التاريخ",
+    "DateFormatRequired": "تنسيق التاريخ مطلوب"
+  },
+  "StorageSettings": {
+    "StorageAccountEndpointRequired" : "نقطة نهاية حساب التخزين مطلوبة",
+    "ConnectionStringRequired" : "سلسلة الاتصال مطلوبة",
+    "SubStorageSettings" : "إعدادات التخزين الفرعي",
+    "AzureFileDownloadBaseUrl" : "عنوان URL الأساسي لتنزيل ملف Azure",
+    "EnterAzureFileDownloadBaseUrl" : "أدخل عنوان URL الأساسي لتنزيل ملف Azure الخاص بك",
+    "AzureStorageAccountConnectionString" : "سلسلة اتصال حساب تخزين Azure",
+    "EnterYourAzureStorageAccountConnectionString" : "أدخل سلسلة اتصال حساب تخزين Azure الخاص بكAzure"
+  },
+  "EmailSettings": {
+    "SubEmailSettings" : "إعدادات البريد الإلكتروني الفرعي",
+    "EmailHost" : "مضيف البريد الإلكتروني",
+    "EnterEmailHost" : "أدخل مضيف البريد الإلكتروني",
+    "EmailHostRequired":"مطلوب مضيف البريد الإلكتروني",
+    "EmailPort": "منفذ البريد الإلكتروني",
+    "EnterEmailPort": "أدخل منفذ البريد الإلكتروني",
+    "EmailPortRequired": "مطلوب منفذ البريد الإلكتروني",
+    "EmailSenderUsername": "اسم مستخدم مرسل البريد الإلكتروني",
+    "EnterSenderEmailUsername": "أدخل اسم مستخدم البريد الإلكتروني للمرسل",
+    "EmailSenderUsernamerequired": "مطلوب اسم مستخدم مرسل البريد الإلكتروني",
+    "EmailSenderPassword":"كلمة مرور مرسل البريد الإلكتروني",
+    "EnterEmailSenderPassword":"أدخل كلمة مرور البريد الإلكتروني للمرسل",
+    "EmailSenderPasswordRequired": "كلمة مرور مرسل البريد الإلكتروني مطلوبة",
+    "EmailAuthEnable":"تم تمكين مصادقة البريد الإلكتروني",
+    "EnterEmailAuthEnable":"أدخل تمكين مصادقة البريد الإلكتروني",
+    "EmailAuthEnableRequired": "مطلوب تمكين مصادقة البريد الإلكتروني",
+    "EmailStarttls":"تم تمكين Starttls للبريد الإلكتروني",
+    "EnterEmailStarttls":"أدخل تمكين Starttls للبريد الإلكتروني",
+    "EnterEmailStarttlsRequired": "مطلوب تمكين Starttls للبريد الإلكتروني",
+    "EmailPortNumberMaxLength": "يجب أن يكون الحد الأقصى للطول 6 أرقام",
+    "EmailPortNumberValidation": "أرقام المنافذ فقط"
+  }
+
+}
